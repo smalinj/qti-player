@@ -1,0 +1,9 @@
+#summary Roadmap for this project
+
+= Milestone 1=
+First version with:
+ * start page
+ * item pages
+ * summary page
+
+There is navigation between pages. Pages show content as a text
