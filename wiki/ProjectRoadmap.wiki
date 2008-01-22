@@ -1,0 +1,7 @@
+#summary Roadmap for this project
+
+= Version 0.1 =
+ * Show assessment summary from imsmanifest.xml
+ * Allow navigation between pages (items)
+ * Show (dummy) summary page with test result.
+ * Item page can only show some text from item XML file
