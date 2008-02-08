@@ -1,7 +1,12 @@
 #summary Roadmap for this project
 
 = Version 0.1 =
- * Show assessment summary from imsmanifest.xml
+This version should have basic functionalities for simple tests with choice activity.
+ * Show assessment summary from assessmentTest
  * Allow navigation between pages (items)
- * Show (dummy) summary page with test result.
- * Item page can only show some text from item XML file
+ * Show summary page with test result.
+ * Item page can show
+   * Text
+   * Picture
+   * ChoiceInteraction
+ * Show errors mode
