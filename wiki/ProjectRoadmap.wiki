@@ -8,5 +8,5 @@ This version should have basic functionalities for simple tests with choice acti
  * Item page can show
    * Text
    * Picture
-   * ChoiceInteraction
+   * choiceInteraction
  * Show errors mode
