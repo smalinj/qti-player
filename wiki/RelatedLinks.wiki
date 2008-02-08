@@ -1,0 +1,6 @@
+#summary Links to other projects related to QTI tools
+
+  * http://qtitools.org - Java version of QTI player and more
+  * http://qtitools.caret.cam.ac.uk - QTI Banking
+  * http://aqurate.kingston.ac.uk/index.htm - Open source authoring tool
+  
