@@ -5,7 +5,7 @@
   # Unzip archive to _yourdir_
   # open _yourdir_/demo.html in web browser. You should be able to work with demo content.
 
-== Include player in you web page ==
+== Include player in your web page ==
   # copy _yourdir_/qtiplayer folder to you website
   # Include it in you web page
   # copy defaultplayer.css or create new CSS and include it in you webpage
