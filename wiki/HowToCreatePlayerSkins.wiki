@@ -6,4 +6,4 @@ Qti player uses CSS file for styling player. To start creating you own skin chec
 The following picture should help you map CSS classes to visual elements:
 
 == CSS class names ==
-http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/player-css-map.png
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
