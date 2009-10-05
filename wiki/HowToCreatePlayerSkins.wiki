@@ -3,7 +3,14 @@
 == Introduction ==
 Qti player uses CSS file for styling player. To start creating you own skin check [http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/defaultplayer.css defaultplayer.css]
 
-The following picture should help you map CSS classes to visual elements:
+The following pictures should help you map CSS classes to visual elements:
 
-== CSS class names ==
+
+
+== Player CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
+
+
+
+== Choice interaction CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
