@@ -1,0 +1,9 @@
+#summary Create skin for player
+
+== Introduction ==
+Qti player uses CSS file for styling player. To start creating you own skin check [http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/defaultplayer.css defaultplayer.css]
+
+The following picture should help you map CSS classes to visual elements:
+
+== CSS class names ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/player-css-map.png
