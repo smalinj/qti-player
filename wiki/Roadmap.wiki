@@ -1,7 +1,5 @@
 #summary Development roadmap
 
-= Development Roadmap =
-
 == Version 0.1 ==
 First 0.1 release should be usable with one choice activity.
 
