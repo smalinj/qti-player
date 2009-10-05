@@ -1,15 +1,16 @@
 #summary Installation step be step
 
-== Instructions ==
+== Download and Check demo ==
   # Download latest distributions from *Downloads* tab
   # Unzip archive to _yourdir_
   # open _yourdir_/demo.html in web browser. You should be able to work with demo content.
-  # To include player in you web page
-    ## copy _yourdir_/qtiplayer folder to you website
-    ## Include it in you web page
-    ## copy defaultplayer.css or create new CSS and include it in you webpage
-    ## Upload content (QTI files)
-    ## create tag for player in web page with id="player" and put URL to the content as text of this tag.
+
+== Include player in you web page ==
+  # copy _yourdir_/qtiplayer folder to you website
+  # Include it in you web page
+  # copy defaultplayer.css or create new CSS and include it in you webpage
+  # Upload content (QTI files)
+  # create tag for player in web page with id="player" and put URL to the content as text of this tag.
 
 == Sample web page ==
 {{{
