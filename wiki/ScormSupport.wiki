@@ -1,0 +1,17 @@
+
+== Introduction ==
+
+SCORM is [http://www.adlnet.gov/Technologies/scorm/default.aspx ADL standard] for storing test results on the server (usually it is LMS).
+
+All you need to do to include SCORM support is:
+Upload scorm folder to you browser and  add this line to you HTML file:
+{{{
+<script type="text/javascript" language="javascript" src="scorm/APIWrapper.js"></script>
+}}}
+
+This javascript library contain script for SCORM communication.
+
+== What will be send to the server ==
+Currently only score is send to the server using:
+  * cmi.core.score.max
+  * cmi.core.score.raw
