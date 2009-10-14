@@ -5,7 +5,11 @@ Currenty only the most basic options are supported:
   * Text:
     * pictures
     * links
+    * audio (depends on platform)
+    * video (depends on platform)
   * Interactions:
     * choiceInteraction (shuffle, maxChoices)
+    * inlineChoice (shuffle)
+    * textEntryInteraction
   * Response processing
     * correctResponse tags
