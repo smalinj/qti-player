@@ -1,17 +1,27 @@
-
 == Introduction ==
 
 SCORM is [http://www.adlnet.gov/Technologies/scorm/default.aspx ADL standard] for storing test results on the server (usually it is LMS).
 
-All you need to do to include SCORM support is:
-Upload scorm folder to you browser and  add this line to you HTML file:
+To add SCORM support:
+  # Upload scorm folder to you browser and include APIWrapper.js file
+  # Define onAssessmentFinished() function and send results using SCOMR protocol.
+
+== Sample HTML fragment with SCORM support: ==
 {{{
 <script type="text/javascript" language="javascript" src="scorm/APIWrapper.js"></script>
+<script language="javascript">
+  function qpOnAppLoaded(){
+    // Load assessment
+    var player = qpCreatePlayer('player');
+    player.load('content/test.xml');
+
+    // Send results via SCORM
+    player.onAssessmentFinished = function(result){
+      doLMSInitialize();
+      doLMSSetScore(result.score, result.max);
+      doLMSCommit();
+      doLMSFinish();
+    }
+  }
+</script>
 }}}
-
-This javascript library contain script for SCORM communication.
-
-== What will be send to the server ==
-Currently only score is send to the server using:
-  * cmi.core.score.max
-  * cmi.core.score.raw
