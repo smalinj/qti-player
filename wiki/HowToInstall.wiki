@@ -25,12 +25,12 @@
 
     <title>QTI Player demo</title>
     
-    <script type="text/javascript" language="javascript"   src="qtiplayer/qtiplayer.nocache.js"></script>
+    <script type="text/javascript" language="javascript" src="qtiplayer/qtiplayer.nocache.js"></script>
     <script language="javascript">
+        // Create player and load content
     	function qpOnAppLoaded(){
-    		// Load assessment
-    		var player = qpCreatePlayer('myplayer');
-    		player.load('content/test.xml');
+    	  var player = qpCreatePlayer('myplayer');
+    	  player.load('content/test.xml');
     	}
 
  	// Optional function to handle assessment result
