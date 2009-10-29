@@ -14,3 +14,9 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
 
 == Choice interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
+
+In check mode button can additional style:
+  * *qp-choice-selected-correct* - correct answer
+  * *qp-choice-selected-wrong* - wrong answer
+  * *qp-choice-notselected-wrong* - wrong but not selected answer (correct one)
+  * *qp-choice-notselected-correct* - correct but not selected answer (error)
