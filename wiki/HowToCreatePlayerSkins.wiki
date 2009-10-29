@@ -15,8 +15,22 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
 == Choice interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
 
-In check mode button can additional style:
+In check mode button can have additional style:
   * *qp-choice-selected-correct* - correct answer
   * *qp-choice-selected-wrong* - wrong answer
   * *qp-choice-notselected-wrong* - wrong but not selected answer (correct one)
   * *qp-choice-notselected-correct* - correct but not selected answer (error)
+
+
+== Text ==
+=== inlineChoiceInteraction ===
+
+In check mode:
+  * *qp-text-choice-correct* - correct answer
+  * *qp-text-choice-wrong* - wrong answer
+
+=== textEntryInteraction ===
+
+In check mode:
+  * *qp-text-textentry-correct* - correct answer
+  * *qp-text-textentry-wrong* - wrong answer
