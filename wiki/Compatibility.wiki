@@ -8,8 +8,11 @@ Currenty only the most basic options are supported:
     * audio (depends on platform)
     * video (depends on platform)
   * Interactions:
-    * choiceInteraction (shuffle, maxChoices)
+    * choiceInteraction (shuffle, maxChoices, feedbacks)
     * inlineChoice (shuffle)
     * textEntryInteraction
+  * Object
+    * support for video files
+    * support for audio files
   * Response processing
     * correctResponse tags
