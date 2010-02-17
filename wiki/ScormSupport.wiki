@@ -21,7 +21,7 @@ To add SCORM support:
       doLMSSetScore(player.getResult().getScore(), player.getResult().getMaxScore());
       doLMSCommit();
       doLMSFinish();
-      // user this to get Assessment Session time
+      // user this to get Assessment Session time (in seconds)
       var time = player.getAssessmentSessionReport().getTime();
     }
   }
