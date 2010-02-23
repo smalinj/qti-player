@@ -1,4 +1,5 @@
 #summary Work with the player using javascript
+#labels Featured
 
 == Introduction ==
 
