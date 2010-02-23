@@ -1,0 +1,40 @@
+#summary Work with the player using javascript
+
+== Introduction ==
+
+This article explains the usage of javascript interface of the player object.
+
+== Sample HTML/javascript example: ==
+{{{
+<script type="text/javascript" language="javascript" src="scorm/APIWrapper.js"></script>
+<script language="javascript">
+  function qpOnAppLoaded(){
+    // Load assessment
+    var player = qpCreatePlayer('player');
+    player.load('content/test.xml');
+
+    // use this to get Assessment Session time (in seconds)
+    var time = player.getAssessmentSessionReport().getTime();
+
+    // implement this to get or set the Assessment Session state
+    var state = player.getState();
+    player.setState(state);
+
+    // move to the next item
+    player.navigateNextItem();
+
+    // move to the previous item
+    player.navigatePreviousItem();
+
+    // finish current Item Session (and show feedback)
+    player.navigateFinishItem();
+
+    // finish the Assessment Session
+    player.navigateFinishAssessment();
+
+    // reset the answers and results for current item (and hide feedback)
+    player.navigateResetItem();
+    }
+  }
+</script>
+}}}
