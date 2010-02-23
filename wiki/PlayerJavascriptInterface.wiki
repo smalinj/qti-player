@@ -4,7 +4,7 @@
 
 This article explains the usage of javascript interface of the player object.
 
-== Sample HTML/javascript example: ==
+== HTML/javascript usage example: ==
 {{{
 <script type="text/javascript" language="javascript" src="scorm/APIWrapper.js"></script>
 <script language="javascript">
