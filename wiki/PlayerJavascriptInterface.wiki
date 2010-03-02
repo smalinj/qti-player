@@ -13,6 +13,9 @@ This article explains the usage of javascript interface of the player object.
     // Load assessment
     var player = qpCreatePlayer('player');
     player.load('content/test.xml');
+  }
+
+  function managePlayer(){
 
     // use this to get Assessment Session time (in seconds)
     var time = player.getAssessmentSessionReport().getTime();
