@@ -22,6 +22,8 @@ To add SCORM support:
       doLMSCommit();
       doLMSFinish();
 
+  function managePlayer(){
+
       // use this to get Assessment Session time (in seconds)
       var time = player.getAssessmentSessionReport().getTime();
 
