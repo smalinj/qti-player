@@ -21,6 +21,7 @@ To add SCORM support:
       doLMSSetScore(player.getResult().getScore(), player.getResult().getMaxScore());
       doLMSCommit();
       doLMSFinish();
+  }
 
   function managePlayer(){
 
