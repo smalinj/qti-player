@@ -13,6 +13,26 @@ This article explains the usage of javascript interface of the player object.
     // Load assessment
     var player = qpCreatePlayer('player');
     player.load('content/test.xml');
+
+    // implement this functions in order to catch 
+    // session events
+ 
+    player1.onAssessmentSessionBegin = function(){
+      // called after the Asssessment Session is begun
+      alert("Assessment Session begin");
+    }
+    player1.onAssessmentSessionFinished = function(){
+      // called after the Assessment Session is finished
+      alert("Assessment Session finished");
+    }
+    player1.onItemSessionBegin = function(){
+      // called after each Item Session is begun
+      alert("Item Session begin");
+    }
+    player1.onItemSessionFinished = function(){
+      // called after each Item Session is finished
+      alert("Item Session finished");
+    }
   }
 
   function managePlayer(){
@@ -38,7 +58,19 @@ This article explains the usage of javascript interface of the player object.
 
     // reset the answers and results for current item (and hide feedback)
     player.navigateResetItem();
-    }
+
+    // get player engine state
+    var engineState = player.getEngineState().toString();
   }
+
 </script>
 }}}
+
+== Engine State enumeration ==
+_NONE_ – player does not function, 
+_LOADING_ASSESSMENT_ – delivery engine is loading the assessment file, 
+_ASSESSMENT_LOADED_ – the Assessment file has been loaded, history initialized, time counting started, 
+_LOADING_ITEM_ – the delivery engine is loading the Assessment Item (first or subsequent), 
+_ITEM_LOADED_ – the Assessment Item file has been loaded, the state for the Item has been loaded, 
+_RUNNING_ – the Assessment is running, awaiting for the user action; this is the only state that enables the navigation over the assessment items and managing assessment state.
+_FINISHED_ – the Assessment has been finished;
