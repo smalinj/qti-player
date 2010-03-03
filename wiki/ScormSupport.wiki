@@ -1,4 +1,7 @@
-Support for Scorm.
+#summary Support for Scorm.
+
+*IMPORTANT*
+*PLEASE NOTE THE CHANGE IN THE NAME OF THE CALLBACK FUNCTION CALLED WHEN THE ASSESSMENT IS FINISHED*
 
 == Introduction ==
 
