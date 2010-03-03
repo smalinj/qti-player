@@ -1,3 +1,5 @@
+Support for Scorm.
+
 == Introduction ==
 
 SCORM is [http://www.adlnet.gov/Technologies/scorm/default.aspx ADL standard] for storing test results on the server (usually it is LMS).
