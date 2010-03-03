@@ -21,6 +21,8 @@ This article explains the usage of javascript interface of the player object.
       // called after the Asssessment Session is begun
       alert("Assessment Session begin");
     }
+
+    *// note the change onAssessmentFinished -> onAssessmentSessionFinished*
     player1.onAssessmentSessionFinished = function(){
       // called after the Assessment Session is finished
       alert("Assessment Session finished");
@@ -60,14 +62,16 @@ This article explains the usage of javascript interface of the player object.
     player.navigateResetItem();
 
     // get player engine state
-    var engineState = player.getEngineState().toString();
+    var engineState = player.getEngineMode().toString();
   }
 
 </script>
 }}}
 
 == Engine State enumeration ==
+
 _NONE_ – player does not function, 
+
 _LOADING_ASSESSMENT_ – delivery engine is loading the assessment file, 
 
 _ASSESSMENT_LOADED_ – the Assessment file has been loaded, history initialized, time counting started, 
@@ -79,3 +83,14 @@ _ITEM_LOADED_ – the Assessment Item file has been loaded, the state for the It
 _RUNNING_ – the Assessment is running, awaiting for the user action; this is the only state that enables the navigation through the assessment items.
 
 _FINISHED_ – the Assessment has been finished;
+
+== Java Script interface utilities ==
+
+=== Navigation ===
+Navigation is the control over the Assessment Session and Assessment Item Session flows. Can be done when the _EngineState_ is _RUNNING_.
+
+=== Engine Mode ===
+Mode control ensures the proper player operation. It concerns: loading files, op
+
+=== Assessment Session State ===
+Assessment session state control concerns the management over the content introduced by the user. The state can be 
