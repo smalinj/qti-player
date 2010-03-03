@@ -10,7 +10,7 @@ SCORM is [http://www.adlnet.gov/Technologies/scorm/default.aspx ADL standard] fo
 
 To add SCORM support:
   # Upload scorm folder to you browser and include APIWrapper.js file
-  # Define onAssessmentFinished() function and send results using SCOMR protocol.
+  # Define *onAssessmentSessionFinished*() function and send results using SCOMR protocol.
 
 == Sample HTML fragment with SCORM support: ==
 {{{
