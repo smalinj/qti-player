@@ -39,13 +39,6 @@ This article explains the usage of javascript interface of the player object.
 
   function managePlayer(){
 
-    // use this to get Assessment Session time (in seconds)
-    var time = player.getAssessmentSessionReport().getTime();
-
-    // implement this to get or set the Assessment Session state
-    var state = player.getState();
-    player.setState(state);
-
     // move to the next item
     player.navigateNextItem();
 
@@ -61,8 +54,21 @@ This article explains the usage of javascript interface of the player object.
     // reset the answers and results for current item (and hide feedback)
     player.navigateResetItem();
 
-    // get player engine state
-    var engineState = player.getEngineMode().toString();
+
+    // get player engine mode
+    var engineMode = player.getEngineMode().toString();
+    if (engineMode == "RUNNING"){
+      alert("Engine is running");
+    }
+
+
+    // implement this to get or set the Assessment Session state
+    var state = player.getState();
+    player.setState(state);
+
+
+    // use this to get Assessment Session time (in seconds)
+    var time = player.getAssessmentSessionReport().getTime();
   }
 
 </script>
@@ -72,11 +78,11 @@ This article explains the usage of javascript interface of the player object.
 
 _NONE_ – player does not function, 
 
-_LOADING_ASSESSMENT_ – delivery engine is loading the assessment file, 
+_ASSESSMENT_LOADING_ – delivery engine is loading the assessment file, 
 
 _ASSESSMENT_LOADED_ – the Assessment file has been loaded, history initialized, time counting started, 
 
-_LOADING_ITEM_ – the delivery engine is loading the Assessment Item (first or subsequent), 
+_ITEM_LOADING_ – the delivery engine is loading the Assessment Item (first or subsequent), 
 
 _ITEM_LOADED_ – the Assessment Item file has been loaded, the state for the Item has been loaded, 
 
@@ -85,12 +91,16 @@ _RUNNING_ – the Assessment is running, awaiting for the user action; this is t
 _FINISHED_ – the Assessment has been finished;
 
 == Java Script interface utilities ==
+The description of crucial issues in the qtiplayer JS interface.
 
 === Navigation ===
 Navigation is the control over the Assessment Session and Assessment Item Session flows. Can be done when the _EngineState_ is _RUNNING_.
 
 === Engine Mode ===
-Mode control ensures the proper player operation. It concerns: loading files, op
+Mode control provides the information about the player operation.
 
 === Assessment Session State ===
-Assessment session state control concerns the management over the content introduced by the user. The state can be 
+Assessment session state control concerns the management over the content introduced by the user. The state *cannot* be controlled if the _EngineMode_ is _NONE or _ASSESSMENT_LOADING_.
+
+=== Assessment Session Report ===
+Provides the information about the current Assessment and Item Sessions features.
