@@ -50,7 +50,7 @@ Provides the information about the current Assessment and Item Sessions features
     // implement this functions in order to catch 
     // session events
  
-    player1.onAssessmentSessionBegin = function(){
+    player.onAssessmentSessionBegin = function(){
       // called after the Asssessment Session is begun
       alert("Assessment Session begin");
     }
@@ -58,15 +58,15 @@ Provides the information about the current Assessment and Item Sessions features
     //
     // note the change onAssessmentFinished -> onAssessmentSessionFinished
     //
-    player1.onAssessmentSessionFinished = function(){
+    player.onAssessmentSessionFinished = function(){
       // called after the Assessment Session is finished
       alert("Assessment Session finished");
     }
-    player1.onItemSessionBegin = function(){
+    player.onItemSessionBegin = function(){
       // called after each Item Session is begun
       alert("Item Session begin");
     }
-    player1.onItemSessionFinished = function(){
+    player.onItemSessionFinished = function(){
       // called after each Item Session is finished
       alert("Item Session finished");
     }
