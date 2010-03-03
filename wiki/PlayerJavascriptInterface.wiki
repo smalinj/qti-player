@@ -10,7 +10,7 @@ This article explains the usage of javascript interface of the player object.
 The description of crucial issues in the qtiplayer JS interface.
 
 === + Navigation ===
-Navigation is the control over the Assessment Session and Assessment Item Session flows. Can be done when the _EngineMode_ is _RUNNING_.
+Navigation is the control over the Assessment Session and Assessment Item Session flows. Can be done when the _Engine Mode_ is _RUNNING_.
 
 === + Engine Mode ===
 Mode control provides the information about the player operation. It could carry the String values as follows:
