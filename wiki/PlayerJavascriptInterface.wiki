@@ -69,8 +69,13 @@ This article explains the usage of javascript interface of the player object.
 == Engine State enumeration ==
 _NONE_ – player does not function, 
 _LOADING_ASSESSMENT_ – delivery engine is loading the assessment file, 
+
 _ASSESSMENT_LOADED_ – the Assessment file has been loaded, history initialized, time counting started, 
+
 _LOADING_ITEM_ – the delivery engine is loading the Assessment Item (first or subsequent), 
+
 _ITEM_LOADED_ – the Assessment Item file has been loaded, the state for the Item has been loaded, 
-_RUNNING_ – the Assessment is running, awaiting for the user action; this is the only state that enables the navigation over the assessment items and managing assessment state.
+
+_RUNNING_ – the Assessment is running, awaiting for the user action; this is the only state that enables the navigation through the assessment items.
+
 _FINISHED_ – the Assessment has been finished;
