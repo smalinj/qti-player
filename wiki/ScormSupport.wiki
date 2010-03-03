@@ -16,7 +16,7 @@ To add SCORM support:
     player.load('content/test.xml');
 
     // Send results via SCORM
-    player.onAssessmentFinished = function(){
+    player.onAssessmentSessionFinished = function(){
       doLMSInitialize();
       doLMSSetScore(player.getResult().getScore(), player.getResult().getMaxScore());
       doLMSCommit();
