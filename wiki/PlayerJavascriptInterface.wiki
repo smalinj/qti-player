@@ -93,14 +93,14 @@ _FINISHED_ – the Assessment has been finished;
 == Java Script interface utilities ==
 The description of crucial issues in the qtiplayer JS interface.
 
-=== Navigation ===
+=== + Navigation ===
 Navigation is the control over the Assessment Session and Assessment Item Session flows. Can be done when the _EngineState_ is _RUNNING_.
 
-=== Engine Mode ===
+=== + Engine Mode ===
 Mode control provides the information about the player operation.
 
-=== Assessment Session State ===
-Assessment session state control concerns the management over the content introduced by the user. The state *cannot* be controlled if the _EngineMode_ is _NONE or _ASSESSMENT_LOADING_.
+=== + Assessment Session State ===
+Assessment session state control concerns the management over the content introduced by the user. The state *cannot* be controlled if the _EngineMode_ is _NONE or _ASSESSMENT_LOADING_ .
 
-=== Assessment Session Report ===
+=== + Assessment Session Report ===
 Provides the information about the current Assessment and Item Sessions features.
