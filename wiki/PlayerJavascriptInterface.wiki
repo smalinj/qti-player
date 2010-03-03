@@ -9,10 +9,10 @@ This article explains the usage of javascript interface of the _qtiplayer_ objec
 == Java Script interface features description ==
 The description of crucial issues in the qtiplayer JS interface.
 
-* === Navigation ===
+=== - Navigation ===
 Navigation is the control over the Assessment Session and Assessment Item Session flows. Can be done when the _Engine Mode_ is _RUNNING_.
 
-* === Engine Mode ===
+=== - Engine Mode ===
 Mode control provides the information about the player operation. It could carry the String values as follows:
 
 _NONE_ – player does not function, 
@@ -29,10 +29,10 @@ _RUNNING_ – the Assessment is running, awaiting for the user action; this is t
 
 _FINISHED_ – the Assessment has been finished;
 
-* === Assessment Session State ===
+=== - Assessment Session State ===
 Assessment session state control concerns the management over the content introduced by the user. The state *cannot* be controlled if the _Engine Mode_ is _NONE or _ASSESSMENT_LOADING_ .
 
-* === Assessment Session Report ===
+=== - Assessment Session Report ===
 Provides the information about the current Assessment and Item Sessions features.
 
 
