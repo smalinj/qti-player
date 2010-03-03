@@ -55,7 +55,9 @@ Provides the information about the current Assessment and Item Sessions features
       alert("Assessment Session begin");
     }
 
-    *// note the change onAssessmentFinished -> onAssessmentSessionFinished*
+    //
+    // note the change onAssessmentFinished -> onAssessmentSessionFinished
+    //
     player1.onAssessmentSessionFinished = function(){
       // called after the Assessment Session is finished
       alert("Assessment Session finished");
