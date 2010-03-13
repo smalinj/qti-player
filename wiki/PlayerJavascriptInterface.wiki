@@ -98,8 +98,10 @@ Provides the information about the current Assessment and Item Sessions features
 
 
     // implement this to get or set the Assessment Session state
-    var state = player.getState();
-    player.setState(state);
+    // in string value
+    // note: player.getState() and player.setState() are depreciated
+    var state = player.getStateString();
+    player.setStateString(state);
 
 
     // use this to get Assessment Session time (in seconds)
