@@ -126,7 +126,7 @@ Provides the information about the current Assessment and Item Sessions features
     // get the current user score
     var score = report.getScore();
     // get the maxium user score
-    var score = report.getScoreMax();
+    var max = report.getScoreMax();
 
     // get the lesson status 
     var lessonStatus = report.getLessonStatus();
