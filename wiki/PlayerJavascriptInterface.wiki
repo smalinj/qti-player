@@ -123,7 +123,7 @@ Provides the information about the current Assessment and Item Sessions features
     var report = player.getAssessmentSessionReport();
     // use this to get Assessment Session time (in seconds)
     var time = report.getTime();
-    // get the actual user score
+    // get the current user score
     var score = report.getScore();
     // get the maxium user score
     var score = report.getScoreMax();
