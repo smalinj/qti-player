@@ -29,6 +29,17 @@ _RUNNING_ – the Assessment is running, awaiting for the user action; this is t
 
 _FINISHED_ – the Assessment has been finished;
 
+=== + Lesson Status ===
+Provides the information about the status of the current lesson. Possible values are:
+
+_INCOMPLETE_ – all pages have not been visited yet, 
+
+_COMPLETE_ – all pages have been visited and the maximum score for the assessment is 0, 
+
+_PASSED_ – all pages have been visited and the user score is equal to or higher than the mastery score, 
+
+_PASSED_ – all pages have been visited and the user score is lower than the mastery score,
+
 === + Assessment Session State ===
 Assessment session state control concerns the management over the content introduced by the user. The state *cannot* be controlled if the _Engine Mode_ is _NONE or _ASSESSMENT_LOADING_ .
 
@@ -104,9 +115,25 @@ Provides the information about the current Assessment and Item Sessions features
     player.setStateString(state);
 
 
-    // use this to get Assessment Session time (in seconds)
-    var time = player.getAssessmentSessionReport().getTime();
-  }
+    // set the mastery score
+    player.setMasteryScore(50);
 
+  
+    // get the Assessment Session Report
+    var report = player.getAssessmentSessionReport();
+    // use this to get Assessment Session time (in seconds)
+    var time = report.getTime();
+    // get the actual user score
+    var score = report.getScore();
+    // get the maxium user score
+    var score = report.getScoreMax();
+
+
+    // get the lesson status 
+    var lessonStatus = report.getLessonStatus();
+    if (lessonStatus == "PASSED")
+      alert("Lesson passed");
+
+  }
 </script>
 }}}
