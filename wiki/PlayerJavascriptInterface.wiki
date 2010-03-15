@@ -34,7 +34,7 @@ Provides the information about the status of the current lesson. Possible values
 
 _INCOMPLETE_ – all pages have not been visited yet, 
 
-_COMPLETE_ – all pages have been visited and the maximum score for the assessment is 0, 
+_COMPLETED_ – all pages have been visited and the maximum score for the assessment is 0, 
 
 _PASSED_ – all pages have been visited and the user score is equal to or higher than the mastery score, 
 
