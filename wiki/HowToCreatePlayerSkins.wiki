@@ -22,6 +22,11 @@ In check mode button can have additional style:
   * *qp-choice-notselected-correct* - correct but not selected answer (error)
 
 
+
+== Order interaction CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/order-css-map.png
+
+
 == Text ==
 === inlineChoiceInteraction ===
 
