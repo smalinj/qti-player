@@ -38,7 +38,7 @@ _COMPLETE_ – all pages have been visited and the maximum score for the assessm
 
 _PASSED_ – all pages have been visited and the user score is equal to or higher than the mastery score, 
 
-_PASSED_ – all pages have been visited and the user score is lower than the mastery score,
+_FAILED_ – all pages have been visited and the user score is lower than the mastery score,
 
 === + Assessment Session State ===
 Assessment session state control concerns the management over the content introduced by the user. The state *cannot* be controlled if the _Engine Mode_ is _NONE or _ASSESSMENT_LOADING_ .
