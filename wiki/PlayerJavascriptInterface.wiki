@@ -100,6 +100,9 @@ Provides the information about the current Assessment and Item Sessions features
     // reset the answers and results for current item (and hide feedback)
     player.navigateResetItem();
 
+    // hide answers marking and feedback, does not reset the answers
+    player.navigateContinueItem();
+
 
     // get player engine mode
     var engineMode = player.getEngineMode().toString();
