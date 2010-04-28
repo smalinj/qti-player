@@ -12,7 +12,7 @@ The desired links should be placed in the nodes structure, as follows:
 </styleDeclaration>
 }}}
 
-Summary for _<link/>_ attributes:
+Summary for _< link />_ attributes:
  - _href_ - path to the CSS file, relatively to the 
 
 
