@@ -1,13 +1,20 @@
-#summary This page explains how to include CSS documents to the qti content definition
+#summary This page explains how to include CSS documents to the QTI content definition
 
 = Introduction =
 
-
+The Assessment definition or Assessment Item definition documens could contain the reference to the external CSS files. 
 
 
 = Details =
+{{{
+<assessmentItem>
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+<styleDeclaration>
+  <link href="choice_single_style.css" userAgent=".*"/>
+</styleDeclaration>
+
+<itemBody>
+<p>blah blah blah</p>
+</itemBody>
+</assessmentItem>
+}}}
