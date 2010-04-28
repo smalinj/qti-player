@@ -1,12 +1,23 @@
-#summary This page explains how to include CSS documents to the QTI content definition
+#summary This page explains how to include CSS documents to the QTI content declaration
 
 = Introduction =
 
-The Assessment declaration or Assessment Item declaration document could contain the reference to the external CSS files. 
+The Assessment declaration or Assessment Item declaration document could contain the reference to the external CSS files.
+
+The desired links should be placed in the nodes structure, as follows:
+{{{
+<styleDeclaration>
+  <link href="firefox.css" userAgent=".*mozilla.*"/>
+  <link href="ie.css" userAgent=".*msie.*"/>
+</styleDeclaration>
+}}}
+
+Summary for _<link/>_ attributes:
+ - _href_ - path to the CSS file, relatively to the 
 
 
-= Style reference in Assessment Item document =
-This is how to include the link to the css file in the Assessment Item declaration:
+= Style reference in the Assessment declaration =
+This is how to include the link to the css file in the Assessment declaration:
 {{{
 <assessmentTest>
 
@@ -24,8 +35,8 @@ This is how to include the link to the css file in the Assessment Item declarati
 
 
 
-= Style reference in Assessment document =
-This is how to include the link to the css file in the Assessment declaration:
+= Style reference in the Assessment Item declaration =
+This is how to include the link to the css file in the Assessment Item declaration:
 {{{
 <assessmentItem>
 
