@@ -2,19 +2,39 @@
 
 = Introduction =
 
-The Assessment definition or Assessment Item definition documens could contain the reference to the external CSS files. 
+The Assessment declaration or Assessment Item declaration document could contain the reference to the external CSS files. 
 
 
-= Details =
+= Style reference in Assessment Item document =
+This is how to include the link to the css file in the Assessment Item declaration:
+{{{
+<assessmentTest>
+
+  <styleDeclaration>
+    <link href="assessment_style.css" userAgent=".*"/>
+  </styleDeclaration>
+
+  <testPart>
+    <assessmentSection identifier="sectionA" title="Section A" visible="true">
+      <assessmentItemRef identifier="order" href="demo/order.xml"/>
+    </assessmentSection>
+  </testPart>
+</assessmentTest
+}}}
+
+
+
+= Style reference in Assessment document =
+This is how to include the link to the css file in the Assessment declaration:
 {{{
 <assessmentItem>
 
-<styleDeclaration>
-  <link href="choice_single_style.css" userAgent=".*"/>
-</styleDeclaration>
+  <styleDeclaration>
+    <link href="item_style.css" userAgent=".*"/>
+  </styleDeclaration>
 
-<itemBody>
-<p>blah blah blah</p>
-</itemBody>
+  <itemBody>
+    <p>Some contents, blah blah blah</p>
+  </itemBody>
 </assessmentItem>
 }}}
