@@ -17,7 +17,7 @@ Summary for _< link />_ attributes:
 
  - _userAgent_ - regular expression that would be matched to the user-agent data obtained from the browser
 
-For a more detailed (and working) example, look up here:
+For a more detailed (and working) code example, look up here:
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/
 
@@ -36,7 +36,7 @@ This is how to include the link to the css file in the Assessment declaration:
       <assessmentItemRef identifier="order" href="demo/order.xml"/>
     </assessmentSection>
   </testPart>
-</assessmentTest
+</assessmentTest>
 }}}
 
 
