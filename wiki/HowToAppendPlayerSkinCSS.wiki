@@ -7,8 +7,8 @@ The Assessment declaration or Assessment Item declaration document could contain
 The desired links should be placed in the nodes structure, as follows:
 {{{
 <styleDeclaration>
-  <link href="firefox.css" userAgent=".*mozilla.*"/>
-  <link href="ie.css" userAgent=".*msie.*"/>
+  <link href="firefox.css" userAgent=".*Mozilla.*"/>
+  <link href="ie.css" userAgent=".*Opera.*"/>
 </styleDeclaration>
 }}}
 
