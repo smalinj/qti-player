@@ -11,7 +11,7 @@ This page describes the extensions to QTI specification that are implemented in 
 
 In order to enable the placement of more than one module per item (per page), an additional *Response Processing template* has been created.
 
-The mentioned template matches the answers' correctenes for each module in a page. It's like it executes _match_correct_ template for each response declaration and then summarizes the results of the comparisons. The identifiers for the response declarations are free to choose.
+The mentioned template matches the answers' correctenes for each module in a page. It's like it executes _match_correct_ template for each response declaration and then summarizes the results of the comparisons. The result is put into outcome variable _SCORE_. The identifiers for the response declarations are free to choose.
 
 The name for the template is: 
 *_match_correct_multiple_*
