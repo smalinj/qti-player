@@ -26,4 +26,4 @@ So if you plan to use it, please append in the assessment item definition the re
 
 The template _match_correct_multiple_ is made a default template in case no template is specified in the assessment item definition.
 
-The implementation example of multiple modules per page and _match_correct_multiple_ template is shown [http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml]here.
+The implementation example of multiple modules per page and _match_correct_multiple_ template is shown here: [http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml]
