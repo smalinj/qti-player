@@ -21,7 +21,7 @@ The address for the template is:
 
 So if you plan to use it, please append in the assessment item definition the response processing template information as follows
 {{{
-<responseProcessing template="http://www.ydp.eu/qti/rptemplates/match_correct_multiple.xml"/>
+<responseProcessing template="http://www.ydp.eu/qti/rptemplates/match_correct_multiple"/>
 }}}
 
 The template _match_correct_multiple_ is made a default template in case no template is specified in the assessment item definition.
