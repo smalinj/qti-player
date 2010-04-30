@@ -17,7 +17,7 @@ The name for the template is:
 *_match_correct_multiple_*
 
 The address for the template is: 
-*_http://www.ydp.eu/qti/rptemplates/match_correct_multiple.xml_*
+*_http://www.ydp.eu/qti/rptemplates/match_correct_multiple_*
 
 So if you plan to use it, please append in the assessment item definition the response processing template information as follows
 {{{
