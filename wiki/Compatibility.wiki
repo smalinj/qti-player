@@ -11,8 +11,11 @@ Currenty only the most basic options are supported:
     * choiceInteraction (shuffle, maxChoices, feedbacks)
     * inlineChoice (shuffle)
     * textEntryInteraction
+    * orderInteraction
   * Object
     * support for video files
     * support for audio files
   * Response processing
     * correctResponse tags
+  * Feedbacks
+    * feedbackInline in choiceInteraction
