@@ -15,6 +15,9 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
 == Choice interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
 
+When the answer is selected, the inline feeback may be shown for each answer:
+  * *qp-choice-feedback* - inline feedback
+
 In check mode button can have additional style:
   * *qp-choice-selected-correct* - correct answer
   * *qp-choice-selected-wrong* - wrong answer
