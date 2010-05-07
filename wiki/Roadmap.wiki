@@ -1,5 +1,15 @@
 #summary Development roadmap
 
+== Version 1.2 ==
+Development plan:
+  * Support for CSS styles inside assessmentItem
+  * New slide show module
+  * New ordering module
+  * New match module
+
+
+
+
 == Version 1.1 ==
 Development plan:
   * Support for CSS styles inside assessmentItem
