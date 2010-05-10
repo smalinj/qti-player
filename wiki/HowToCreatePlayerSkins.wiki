@@ -10,7 +10,7 @@ The following pictures should help you map CSS classes to visual elements:
 == Player CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
 
-
+== Results page CSS map  ==
 
 == Choice interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
