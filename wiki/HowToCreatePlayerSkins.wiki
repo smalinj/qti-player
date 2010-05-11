@@ -17,7 +17,12 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/resultpage-css-map.
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
 
 When the answer is selected, the inline feeback may be shown for each answer:
-  * *qp-choice-feedback* - inline feedback
+  * *qp-choice-feedback* - inline feedback (hidden)
+  * *qp-choice-feedback-correct* - inline feedback shown for a correct answer
+  * *qp-choice-feedback-wrong* - inline feedback shown for a wrong answer
+
+In work mode:
+  * *qp-choice-button* - every button
 
 In check mode button can have additional style:
   * *qp-choice-selected-correct* - correct answer
@@ -33,6 +38,9 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/order-css-map.png
 
 == Text ==
 === inlineChoiceInteraction ===
+
+In work mode (not check mode):
+  * *qp-text-choice* - every button
 
 In check mode:
   * *qp-text-choice-correct* - correct answer
