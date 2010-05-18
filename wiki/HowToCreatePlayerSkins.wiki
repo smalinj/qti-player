@@ -36,6 +36,9 @@ In check mode button can have additional style:
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/order-css-map.png
   * *qp-order-cover* is created to disable text selection in the lower layers - there should be a transparent gif or png for the background-image
 
+== Match interaction CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/match-css-map.png
+
 == Text ==
 === inlineChoiceInteraction ===
 
