@@ -10,8 +10,12 @@ The following pictures should help you map CSS classes to visual elements:
 == Player CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
 
+
+
 == Results page CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/resultpage-css-map.png
+
+
 
 == Choice interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
@@ -36,6 +40,8 @@ In check mode button can have additional style:
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/order-css-map.png
   * *qp-order-cover* is created to disable text selection in the lower layers - there should be a transparent gif or png for the background-image
 
+
+
 == Match interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/match-css-map.png
 Remarks:
@@ -43,6 +49,8 @@ Remarks:
  * for *qp-match-element-left-container* and *qp-match-element-right-container* width and height are required
  * all elements' classes ending with *-cover* or *-land* should specify a transparent gif or png image as the backgound-image
  * for IE the lines drawn in the area are of classes that finish with *-vml*, for the rest of the browsers (FF, Opera, Chrome, Safari) those classes names' finish with *-svg*
+
+
 
 == Text ==
 === inlineChoiceInteraction ===
