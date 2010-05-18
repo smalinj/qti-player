@@ -48,7 +48,7 @@ Remarks:
  * for *qp-match-container-layout* only width should be specified, height will be calculated on the basis of *qp-match-element-left-container* and *qp-match-element-right-container* elements heights and count
  * for *qp-match-element-left-container* and *qp-match-element-right-container* width and height are required
  * all elements' classes ending with *-cover* or *-land* should specify a transparent gif or png image as the backgound-image
- * for IE the lines drawn in the area are of classes that finish with *-vml*, for the rest of the browsers (FF, Opera, Chrome, Safari) those classes names' finish with *-svg*
+ * for IE the lines drawn in the area are described by classes that finish with *-vml*, for the rest of the browsers (FF, Opera, Chrome, Safari) those classes names' finish with *-svg*
 
 
 
