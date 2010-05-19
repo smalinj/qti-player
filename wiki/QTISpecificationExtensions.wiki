@@ -78,7 +78,9 @@ If 'showHide' set to 'show' the feedback will be shown when the condition of the
 }}}
 
 For more examples of feedback usage see:
+
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_multiple.xml
+
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/match.xml
 
 === Sound as feedback ===
