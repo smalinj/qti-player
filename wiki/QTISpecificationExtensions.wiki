@@ -33,7 +33,7 @@ The implementation example of multiple modules per page and _match_correct_multi
 
 === Modal feedback ===
 
-Modal feedback is defined by including the declaration of '<modalFeedback/>' in Assessment Item document as follows:
+Modal feedback is defined by including the declaration of '< modalFeedback />' node in Assessment Item document, as follows in the example:
 {{{
 <assessmentItem>
   <responseDeclaration ... />
@@ -70,11 +70,11 @@ If 'showHide' set to 'show' the feedback will be shown when the condition of the
 <modalFeedback outcomeIdentifier="SCORE" identifier="(H)|(He)" showHide="show">H or He is selected</modalFeedback>
 <modalFeedback outcomeIdentifier="SCORE" identifier=".*" showHide="show">Whatever.</modalFeedback>
 }}}
- # *standard expression*
+ # *standard expression* - when neither comparator expression nor regular expression is defined, the processing will check whether the answers separated by semicolon (';') are reflecting the current value of the variable
 {{{
-<modalFeedback outcomeIdentifier="SCORE" identifier=".*A1.*" showHide="show">A1 is selected</modalFeedback>
-<modalFeedback outcomeIdentifier="SCORE" identifier="(H)|(He)" showHide="show">H or He is selected</modalFeedback>
-<modalFeedback outcomeIdentifier="SCORE" identifier=".*" showHide="show">Whatever.</modalFeedback>
+<modalFeedback outcomeIdentifier="SCORE" identifier="A1" showHide="show">A1 is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="SCORE" identifier="A1;A2" showHide="show">A1 and A2 are selected</modalFeedback>
+<modalFeedback outcomeIdentifier="SCORE" identifier="A1;A2;A3" showHide="show">A1, A2 and A3 are selected</modalFeedback>
 }}}
 
 
@@ -88,4 +88,4 @@ the HTML content could also be included:
 {{{
 <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" sound="http://rlab.pl/resources/click.mp3">Playing sound!</modalFeedback>
 }}}
-Currently the supported audio file type is *mp3*. The value of the 'sound' attribute points to the file placed relatively to the location of Assessment Item document (so in the first example click.mp3 is placed in the same directory together with exercise.xml). If the path starts from 'http' the relative path is not combined, and the location is treated as absolute (second example).
+Currently the supported audio file type is *mp3*. The value of the 'sound' attribute points to the file placed relatively to the location of Assessment Item document (so in the first example _click.mp3_ is placed in the same directory together with exercise.xml). If the path starts from 'http' the relative path is not combined, and the location is treated as absolute (second example).
