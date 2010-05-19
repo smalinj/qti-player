@@ -27,3 +27,65 @@ So if you plan to use it, please append in the assessment item definition the re
 The template _match_correct_multiple_ is made a default template in case no template is specified in the assessment item definition.
 
 The implementation example of multiple modules per page and _match_correct_multiple_ template is shown here: [http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml]
+
+
+= Feedback processing =
+
+=== Modal feedback ===
+
+Modal feedback is defined by including the declaration of '<modalFeedback/>' in Assessment Item document as follows:
+{{{
+<assessmentItem>
+  <responseDeclaration ... />
+  <outcomeDeclaration identifier="IDENTIFIER" ... />
+  <itemBody>
+    ...
+  </itemBody>
+  <responseProcessing ... />
+  <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="VALUE" showHide="show" >Feedback.</modalFeedback>
+</assessmentItem>
+}}}
+Here are the attrribute explained:
+ * *outcomeIdentifier* - the *identifier* of the variable that will be user in the processing; could be identifier of Response Variable or Outcome Variable
+ * *identifier* - the value to which the current value of the variable will be compared; 
+ * *showHide* - (show/hide) - if the result of the processing is positive the feedback will only be shown (or played) id the 'showHide' value is 'show'. If the result is negative, feedback will not be shown unless the 'showHide' value is 'hide'
+
+*Feedback processing*
+
+The variable given by the identifier defined by 'outcomeIdentifier' attribute is under consideration. For this variable a comparison of its value  and the value defined by 'identifier' attribute is performed. The value in 'identifier' attribute could be of three types:
+ # *numerical value* - the value of the given variable and the value defined in 'identifier' attribute are compared on the mathematical basis. Three comapators are available for the definition
+   * == - equals
+   * >= - greater or equals
+   * <= - less or equals
+The appliation of these comparators is shown in the example below:
+{{{
+<modalFeedback outcomeIdentifier="SCORE" identifier=">=1" showHide="show"/>
+<modalFeedback outcomeIdentifier="SCORE" identifier="<=5" showHide="show"/>
+<modalFeedback outcomeIdentifier="SCORE" identifier="==0" showHide="show"/>
+}}}
+If 'showHide' set to 'show' the feedback will be shown when the condition of the compatrison is met.
+ # *regular expression* - the feedback processing checks whether the value of the variable under consideration matches the given regular expression
+{{{
+<modalFeedback outcomeIdentifier="SCORE" identifier=".*A1.*" showHide="show">A1 is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="SCORE" identifier="(H)|(He)" showHide="show">H or He is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="SCORE" identifier=".*" showHide="show">Whatever.</modalFeedback>
+}}}
+ # *standard expression*
+{{{
+<modalFeedback outcomeIdentifier="SCORE" identifier=".*A1.*" showHide="show">A1 is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="SCORE" identifier="(H)|(He)" showHide="show">H or He is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="SCORE" identifier=".*" showHide="show">Whatever.</modalFeedback>
+}}}
+
+
+=== Sound as feedback ===
+
+In order to achieve sound playback as an feedback action, the attribute 'sound' of the 'modalFeedback' node must be defined. It could be done as follows:
+{{{
+<modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" sound="click.mp3"/>
+}}}
+the HTML content could also be included:
+{{{
+<modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" sound="http://rlab.pl/resources/click.mp3">Playing sound!</modalFeedback>
+}}}
+Currently the supported audio file type is *mp3*. The value of the 'sound' attribute points to the file placed relatively to the location of Assessment Item document (so in the first example click.mp3 is placed in the same directory together with exercise.xml). If the path starts from 'http' the relative path is not combined, and the location is treated as absolute (second example).
