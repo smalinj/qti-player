@@ -54,9 +54,9 @@ Here are the attrribute explained:
 
 The variable given by the identifier defined by 'outcomeIdentifier' attribute is under consideration. For this variable a comparison of its value  and the value defined by 'identifier' attribute is performed. The value in 'identifier' attribute could be of three types:
  # *numerical value* - the value of the given variable and the value defined in 'identifier' attribute are compared on the mathematical basis. Three comapators are available for the definition
-   * == - equals
-   * >= - greater or equals
-   * <= - less or equals
+- == - equals
+- >= - greater or equals
+- <= - less or equals
 The appliation of these comparators is shown in the example below:
 {{{
 <modalFeedback outcomeIdentifier="SCORE" identifier=">=1" showHide="show"/>
