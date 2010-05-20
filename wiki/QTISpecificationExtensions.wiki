@@ -11,7 +11,7 @@ This page describes the extensions to QTI specification that are implemented in 
 
 In order to enable the placement of more than one module per item (per page), an additional *Response Processing template* has been created.
 
-The mentioned template matches the answers' correctenes for each module in a page. It's like it executes _match_correct_ template for each response declaration and then summarizes the results of the comparisons. The result is put into outcome variable _SCORE_. The identifiers for the response declarations are free to choose.
+The mentioned template matches the answers` correctenes for each module in a page. It`s like it executes _match_correct_ template for each response declaration and then summarizes the results of the comparisons. The result is put into outcome variable _SCORE_. The identifiers for the response declarations are free to choose.
 
 The name for the template is: 
 *_match_correct_multiple_*
@@ -33,7 +33,7 @@ The implementation example of multiple modules per page and _match_correct_multi
 
 === Modal feedback ===
 
-Modal feedback is defined by including the declaration of '< modalFeedback />' node in Assessment Item document, as follows in the example:
+Modal feedback is defined by including the declaration of `< modalFeedback />` node in Assessment Item document, as follows in the example:
 {{{
 <assessmentItem>
   <responseDeclaration ... />
@@ -48,12 +48,12 @@ Modal feedback is defined by including the declaration of '< modalFeedback />' n
 Here are the attrribute explained:
  * *outcomeIdentifier* - the *identifier* of the variable that will be user in the processing; could be identifier of Response Variable or Outcome Variable
  * *identifier* - the value to which the current value of the variable will be compared; 
- * *showHide* - (show/hide) - if the result of the processing is positive the feedback will only be shown (or played) id the 'showHide' value is 'show'. If the result is negative, feedback will not be shown unless the 'showHide' value is 'hide'
+ * *showHide* - (show/hide) - if the result of the processing is positive the feedback will only be shown (or played) id the `showHide` value is `show`. If the result is negative, feedback will not be shown unless the `showHide` value is `hide`
 
 *Feedback processing*
 
-The variable given by the identifier defined by 'outcomeIdentifier' attribute is under consideration. For this variable a comparison of its value  and the value defined by 'identifier' attribute is performed. The value in 'identifier' attribute could be of three types:
- 1 *numerical value* - the value of the given variable and the value defined in 'identifier' attribute are compared on the mathematical basis. Three comapators are available for the definition
+The variable given by the identifier defined by `outcomeIdentifier` attribute is under consideration. For this variable a comparison of its value  and the value defined by `identifier` attribute is performed. The value in `identifier` attribute could be of three types:
+ 1 *numerical value* - the value of the given variable and the value defined in `identifier` attribute are compared on the mathematical basis. Three comapators are available for the definition
    * == - equals
    * >= - greater or equals
    * <= - less or equals
@@ -63,26 +63,26 @@ The appliation of these comparators is shown in the example below:
 <modalFeedback outcomeIdentifier="SCORE" identifier="<=5" showHide="show"/>
 <modalFeedback outcomeIdentifier="SCORE" identifier="==0" showHide="show"/>
 }}}
-If 'showHide' set to 'show' the feedback will be shown when the condition of the compatrison is met.
+If `showHide` set to `show` the feedback will be shown when the condition of the compatrison is met.
  2 *regular expression* - the feedback processing checks whether the value of the variable under consideration matches the given regular expression
 {{{
 <modalFeedback outcomeIdentifier="SCORE" identifier=".*A1.*" showHide="show">A1 is selected</modalFeedback>
 <modalFeedback outcomeIdentifier="SCORE" identifier="(H)|(He)" showHide="show">H or He is selected</modalFeedback>
 <modalFeedback outcomeIdentifier="SCORE" identifier=".*" showHide="show">Whatever.</modalFeedback>
 }}}
- 3 *standard expression* - when neither comparator expression nor regular expression is defined, the processing will check whether the answers separated by semicolon (';') are reflecting the current value of the variable
+ 3 *standard expression* - when neither comparator expression nor regular expression is defined, the processing will check whether the answers separated by semicolon (`;`) are reflecting the current value of the variable
 {{{
 <modalFeedback outcomeIdentifier="SCORE" identifier="A1" showHide="show">A1 is selected</modalFeedback>
 <modalFeedback outcomeIdentifier="SCORE" identifier="A1;A2" showHide="show">A1 and A2 are selected</modalFeedback>
 <modalFeedback outcomeIdentifier="SCORE" identifier="A1;A2;A3" showHide="show">A1, A2 and A3 are selected</modalFeedback>
 }}}
 
-Please note that 'identifier="(H;He)|(H;He)"' has the identical translation as 'identifier="H;He"'. The first one is processed as *regular expression*, the latter as *standard expression*.
+Please note that `identifier="(H;He)|(H;He)"` has the identical translation as `identifier="H;He"`. The first one is processed as *regular expression*, the latter as *standard expression*.
 
-When the 'identifier' attribute value is compared to the variable value it is crucial to know how these values are stored. For the purpose of the comparison process the values are stored as string. When the value consists of multiple subvalues, they are separated with semicolon. Here are some examples:
- * cadrinality:simple - 'A1'
- * cadrinality:multiple & ordered - 'A1;A2;A3'
- * baseType:pair & directedPair - 'A1 A2;A3 A4;A5 A6'
+When the `identifier` attribute value is compared to the variable value it is crucial to know how these values are stored. For the purpose of the comparison process the values are stored as string. When the value consists of multiple subvalues, they are separated with semicolon. Here are some examples:
+ * cadrinality:simple - `A1`
+ * cadrinality:multiple & ordered - `A1;A2;A3`
+ * baseType:pair & directedPair - `A1 A2;A3 A4;A5 A6`
 
 
 For more examples of feedback usage see:
@@ -93,7 +93,7 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/match.xml
 
 === Sound as feedback ===
 
-In order to achieve sound playback as an feedback action, the attribute 'sound' of the 'modalFeedback' node must be defined. It could be done as follows:
+In order to achieve sound playback as an feedback action, the attribute `sound` of the `modalFeedback` node must be defined. It could be done as follows:
 {{{
 <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" sound="click.mp3"/>
 }}}
@@ -101,4 +101,4 @@ the HTML content could also be included:
 {{{
 <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" sound="http://rlab.pl/resources/click.mp3">Playing sound!</modalFeedback>
 }}}
-Currently the supported audio file type is *mp3*. The value of the 'sound' attribute points to the file placed relatively to the location of Assessment Item document (so in the first example _click.mp3_ is placed in the same directory together with exercise.xml). If the path starts from 'http' the relative path is not combined, and the location is treated as absolute (second example).
+Currently the supported audio file type is *mp3*. The value of the `sound` attribute points to the file placed relatively to the location of Assessment Item document (so in the first example _click.mp3_ is placed in the same directory together with exercise.xml). If the path starts from `http` the relative path is not combined, and the location is treated as absolute (second example).
