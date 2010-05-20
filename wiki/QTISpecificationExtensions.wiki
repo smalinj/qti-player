@@ -29,7 +29,32 @@ The template _match_correct_multiple_ is made a default template in case no temp
 The implementation example of multiple modules per page and _match_correct_multiple_ template is shown here: [http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml]
 
 
-= Feedback processing =
+= Special Outcome Variables in math_correct_multiple template =
+
+For the template `math_correct_multiple` some special macros has been defined. These macros define the values that are assigned to the special _Outcome Variables_.
+
+Currently there are two special _Outcome Variables_ available:
+ * *<_MODULEIDENTIFIER_-SCORE>* - response processing assignes the current score for the module with _MODULEIDENTIFIER_ identifier
+ * *<_MODULEIDENTIFIER_-SCOREHISTORY>* - response processing assignes the history of score for the module with _MODULEIDENTIFIER_ identifier; ex. if first two answers for the module were wrong, and the third is correct this _Outcome Variable_ will contain the value `0;0;1` etc.
+
+The example of the special _Outcome Variables_ implementation is placed below:
+
+{{{
+<assessmentItem>
+  <responseDeclaration identifier="RESPONSE" ... />
+  <outcomeDeclaration identifier="SCORE" ... />
+  <outcomeDeclaration identifier="RESPONSE-SCORE" ... />
+  <outcomeDeclaration identifier="RESPONSE-SCOREHISTORY" ... />
+  <itemBody>
+    ...
+    <choiceInteraction responseIdentifier="RESPONSE" ... >
+    </choiceInteraction>
+    ...
+  </itemBody>
+  <responseProcessing template="http://www.ydp.eu/qti/rptemplates/match_correct_multiple"/>
+</assessmentItem>
+}}}
+
 
 === Modal feedback ===
 
