@@ -55,6 +55,10 @@ The example of the special _Outcome Variables_ implementation is placed below:
 </assessmentItem>
 }}}
 
+For the real-life example see this document:
+
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_multiple.xml
+
 
 === Modal feedback ===
 
