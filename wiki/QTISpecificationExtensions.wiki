@@ -77,6 +77,14 @@ If 'showHide' set to 'show' the feedback will be shown when the condition of the
 <modalFeedback outcomeIdentifier="SCORE" identifier="A1;A2;A3" showHide="show">A1, A2 and A3 are selected</modalFeedback>
 }}}
 
+Please note that 'identifier="(H;He)|(H;He)"' has the identical translation as 'identifier="H;He"'. The first one is processed as *regular expression*, the latter as *standard expression*.
+
+When the 'identifier' attribute value is compared to the variable value it is crucial to know how these values are stored. For the purpose of the comparison process the values are stored as string. When the value consists of multiple subvalues, they are separated with semicolon. Here are some examples:
+ * cadrinality:simple - 'A1'
+ * cadrinality:multiple & ordered - 'A1;A2;A3'
+ * baseType:pair & directedPair - 'A1 A2;A3 A4;A5 A6'
+
+
 For more examples of feedback usage see:
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_multiple.xml
