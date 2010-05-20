@@ -60,6 +60,9 @@ For the real-life example see this document:
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_multiple.xml
 
 
+= Feedback processing =
+
+
 === Modal feedback ===
 
 Modal feedback is defined by including the declaration of `< modalFeedback />` node in Assessment Item document, as follows in the example:
