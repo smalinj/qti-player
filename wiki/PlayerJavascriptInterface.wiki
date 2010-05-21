@@ -25,11 +25,11 @@ _ITEM_LOADING_ – the delivery engine is loading the Assessment Item (first or 
 
 _ITEM_LOADED_ – the Assessment Item file has been loaded, the state for the Item has been loaded, 
 
-_RUNNING_ – the Assessment is running, awaiting for the user action; this is the state (togetger with _PREVIEW_) that enables the navigation through the assessment items.
+_RUNNING_ – the Assessment is running, awaiting for the user action; this is the state that enables the navigation through the assessment items (as well as _PREVIEW_).
 
 _PREVIEW_ – the Assessment is in preview mode;
 
-_FINISHED_ – the Assessment has been finished;
+_FINISHED_ – the Assessment has been finished; if the state is _FINISHED_ user can navigate through assessment items in preview mode (so, when visiting a page, the state is _PREVIEW_ and all modules are locked)
 
 === + Lesson Status ===
 Provides the information about the status of the current lesson. Possible values are:
@@ -93,12 +93,6 @@ Provides the information about the current Assessment and Item Sessions features
     // move to the previous item
     player.navigatePreviousItem();
 
-    // finish current Item Session (and show feedback)
-    player.navigateFinishItem();
-
-    // finish the Assessment Session
-    player.navigateFinishAssessment();
-
     // reset the answers and results for current item (and hide feedback)
     player.navigateResetItem();
 
@@ -111,6 +105,15 @@ Provides the information about the current Assessment and Item Sessions features
     if (engineMode == "RUNNING"){
       alert("Engine is running");
     }
+
+    // finish current Item Session (and show feedback)
+    player.navigateFinishItem();
+
+    // finish the Assessment Session
+    player.navigateFinishAssessment();
+
+    // go to the Assessment Summary page
+    player.navigateSummaryAssessment();
 
 
     // implement this to get or set the Assessment Session state
