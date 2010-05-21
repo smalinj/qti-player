@@ -25,11 +25,11 @@ _ITEM_LOADING_ – the delivery engine is loading the Assessment Item (first or 
 
 _ITEM_LOADED_ – the Assessment Item file has been loaded, the state for the Item has been loaded, 
 
-_RUNNING_ – the Assessment is running, awaiting for the user action; this is the state that enables the navigation through the assessment items (as well as _PREVIEW_).
+_RUNNING_ – the Assessment is running, awaiting for the user action; this is the engine mode that enables the navigation through the assessment items (as well as _PREVIEW_).
 
 _PREVIEW_ – the Assessment is in preview mode;
 
-_FINISHED_ – the Assessment has been finished; if the state is _FINISHED_ user can navigate through assessment items in preview mode (so, when visiting a page, the state is _PREVIEW_ and all modules are locked)
+_FINISHED_ – the Assessment has been finished; if the engine mode is _FINISHED_ user can navigate through assessment items in preview mode (so, when visiting a page, the state is _PREVIEW_ and all modules are locked)
 
 === + Lesson Status ===
 Provides the information about the status of the current lesson. Possible values are:
