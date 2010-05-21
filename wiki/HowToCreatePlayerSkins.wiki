@@ -12,6 +12,11 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/player-css-map.png
 
 
 
+== Modal feedback CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/feedback-modal-css-map.png
+
+
+
 == Results page CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/resultpage-css-map.png
 
