@@ -25,7 +25,9 @@ _ITEM_LOADING_ – the delivery engine is loading the Assessment Item (first or 
 
 _ITEM_LOADED_ – the Assessment Item file has been loaded, the state for the Item has been loaded, 
 
-_RUNNING_ – the Assessment is running, awaiting for the user action; this is the only state that enables the navigation through the assessment items.
+_RUNNING_ – the Assessment is running, awaiting for the user action; this is the state (togetger with _PREVIEW_) that enables the navigation through the assessment items.
+
+_PREVIEW_ – the Assessment is in preview mode;
 
 _FINISHED_ – the Assessment has been finished;
 
