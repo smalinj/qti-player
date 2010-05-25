@@ -165,3 +165,7 @@ The example below presents how to define the cases for Assessment Feedback:
   </testPart>
 </assessmentTest>
 }}}
+
+The example implementation:
+
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo.xml
