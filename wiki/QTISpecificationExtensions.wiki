@@ -139,6 +139,16 @@ Currently the supported audio file type is *mp3*. The value of the `sound` attri
 
 
 === Assessment feedback ===
+
+Feedback could be displayed on the results summary page that is shown after the Assessment Session is finished. Assessment feedback is a HTML content that is displayed when the condition of the percentage score result is met. The `<assessmentFeedback>` tag could contain one or more `<assessmentFeedbackCase>` tags. Every `<assessmentFeedbackCase>` tag defines a feedback contents thwt will be shown when the condition defined is met. 
+
+*The conditions are checked from first to last and the feedback for only the first matching feedback case will be shown*. Analyzing the upcoming example, if the percentage score for the test is *65%*: 
+ * the condition for *75%* is not met,
+ * the condition for *50%* is met, so the text "Feedback for 50%" will be displayed
+ * the rest of the conditions will not be checked.
+
+The example below presents how to define the cases for Assessment Feedback:
+
 {{{
 <assessmentTest ...>
   <testPart>
