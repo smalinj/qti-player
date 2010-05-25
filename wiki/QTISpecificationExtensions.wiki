@@ -125,7 +125,7 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_mul
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/match.xml
 
-=== Sound as feedback ===
+=== Sound as modal feedback ===
 
 In order to achieve sound playback as an feedback action, the attribute `sound` of the `modalFeedback` node must be defined. It could be done as follows:
 {{{
@@ -136,3 +136,22 @@ the HTML content could also be included:
 <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" sound="http://rlab.pl/resources/click.mp3">Playing sound!</modalFeedback>
 }}}
 Currently the supported audio file type is *mp3*. The value of the `sound` attribute points to the file placed relatively to the location of Assessment Item document (so in the first example _click.mp3_ is placed in the same directory together with exercise.xml). If the path starts from `http` the relative path is not combined, and the location is treated as absolute (second example).
+
+
+=== Assessment feedback ===
+{{{
+<assessmentTest ...>
+  <testPart>
+    <assessmentSection ...>
+      <assessmentItemRef .../>
+      <assessmentItemRef .../>
+
+      <assessmentFeedback>
+        <assessmentFeedbackCase percentageScore="75">Feedback for 75%</assessmentFeedbackCase>
+        <assessmentFeedbackCase percentageScore="50">Feedback for 50%</assessmentFeedbackCase>
+        <assessmentFeedbackCase percentageScore="25">Feedback for 25%</assessmentFeedbackCase>
+      </assessmentFeedback>
+    </assessmentSection>
+  </testPart>
+</assessmentTest>
+}}}
