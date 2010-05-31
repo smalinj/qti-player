@@ -146,6 +146,25 @@ the HTML content could also be included:
 Currently the supported audio file type is *mp3*. The value of the `sound` attribute points to the file placed relatively to the location of Assessment Item document (so in the first example _click.mp3_ is placed in the same directory together with exercise.xml). If the path starts from `http` the relative path is not combined, and the location is treated as absolute (second example).
 
 
+=== Modal feedback sender ===
+
+Showing of each feedback could be also described by the identifier of a sender. The sender is the module that triggered the response processing and the change in score. If the sender-based behaviour is desired the _senderIdentifier_ attribute of _modalFeedback_ needs to be filled. This attribute is filled with *regular expression* that is matched to the value of _responseIdentifier_ of each module.
+
+Values of _indetifier_ and _senderIdentifier_ attributes are checked in the conjunction. If both match - the feedback is shown (provided that `showHide="show"`).
+
+Usage as below:
+
+{{{
+  <itemBody>
+    ...
+    <choiceInteraction responseIdentifier="RESPONSE" ... >
+    </choiceInteraction>
+    ...
+  </itemBody>
+<modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" senderIdentifier="^RESPONSE$"/>
+}}}
+
+
 === Assessment feedback ===
 
 Feedback could be displayed on the results summary page that is shown after the Assessment Session is finished. Assessment feedback is a HTML content that is displayed when the condition of the percentage score result is met. The `<assessmentFeedback>` tag could contain one or more `<assessmentFeedbackCase>` tags. Every `<assessmentFeedbackCase>` tag defines a feedback contents thwt will be shown when the condition defined is met. 
