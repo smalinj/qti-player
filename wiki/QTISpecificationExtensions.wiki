@@ -87,7 +87,7 @@ Modal feedback is defined by including the declaration of `< modalFeedback />` n
   <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="VALUE" showHide="show" >Feedback.</modalFeedback>
 </assessmentItem>
 }}}
-Here are the attrribute explained:
+Here are the attrributes explained:
  * *outcomeIdentifier* - the *identifier* of the variable that will be user in the processing; could be identifier of Response Variable or Outcome Variable
  * *identifier* - the value to which the current value of the variable will be compared; 
  * *showHide* - (show/hide) - if the result of the processing is positive the feedback will only be shown (or played) id the `showHide` value is `show`. If the result is negative, feedback will not be shown unless the `showHide` value is `hide`
@@ -108,15 +108,15 @@ The appliation of these comparators is shown in the example below:
 If `showHide` set to `show` the feedback will be shown when the condition of the compatrison is met.
  2. *regular expression* - the feedback processing checks whether the value of the variable under consideration matches the given regular expression
 {{{
-<modalFeedback outcomeIdentifier="SCORE" identifier=".*A1.*" showHide="show">A1 is selected</modalFeedback>
-<modalFeedback outcomeIdentifier="SCORE" identifier="(H)|(He)" showHide="show">H or He is selected</modalFeedback>
-<modalFeedback outcomeIdentifier="SCORE" identifier=".*" showHide="show">Whatever.</modalFeedback>
+<modalFeedback outcomeIdentifier="RESPONSE" identifier=".*A1.*" showHide="show">A1 is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="RESPONSE" identifier="(H)|(He)" showHide="show">H or He is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="RESPONSE" identifier=".*" showHide="show">Whatever.</modalFeedback>
 }}}
  3. *standard expression* - when neither comparator expression nor regular expression is defined, the processing will check whether the answers separated by semicolon (`;`) are reflecting the current value of the variable
 {{{
-<modalFeedback outcomeIdentifier="SCORE" identifier="A1" showHide="show">A1 is selected</modalFeedback>
-<modalFeedback outcomeIdentifier="SCORE" identifier="A1;A2" showHide="show">A1 and A2 are selected</modalFeedback>
-<modalFeedback outcomeIdentifier="SCORE" identifier="A1;A2;A3" showHide="show">A1, A2 and A3 are selected</modalFeedback>
+<modalFeedback outcomeIdentifier="RESPONSE" identifier="A1" showHide="show">A1 is selected</modalFeedback>
+<modalFeedback outcomeIdentifier="RESPONSE" identifier="A1;A2" showHide="show">A1 and A2 are selected</modalFeedback>
+<modalFeedback outcomeIdentifier="RESPONSE" identifier="A1;A2;A3" showHide="show">A1, A2 and A3 are selected</modalFeedback>
 }}}
 
 Please note that `identifier="(H;He)|(H;He)"` has the identical translation as `identifier="H;He"`. The first one is processed as *regular expression*, the latter as *standard expression*.
