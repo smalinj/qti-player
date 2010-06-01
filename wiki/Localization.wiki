@@ -14,6 +14,10 @@ window.QtiPlayer.locale = {
 
 The object `window.QtiPlayer.locale` should contain all the fields that can be defined for the player. This file ought to be included into the html file that owns the player.
 
+The example can be found here:
+
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/locale_en.js
+
 = Locale definition variables =
 
 The list of the variables that should be defined:
