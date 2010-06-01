@@ -164,6 +164,9 @@ Usage as below:
 <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="value" showHide="show" senderIdentifier="^RESPONSE$"/>
 }}}
 
+Example:
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml
+
 
 === Assessment feedback ===
 
