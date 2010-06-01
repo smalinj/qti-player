@@ -73,7 +73,7 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_cho
 = Feedback processing =
 
 
-=== Modal feedback ===
+== Modal feedback ==
 
 Modal feedback is defined by including the declaration of `< modalFeedback />` node in Assessment Item document, as follows in the example:
 {{{
@@ -98,7 +98,7 @@ Here are the attrributes explained:
  * *sound* - url to the audio file that will be played upon the feedback activation
  * *showHide* - (show/hide) - if the result of the processing is positive the feedback will only be shown (or played) id the `showHide` value is `show`. If the result is negative, feedback will not be shown unless the `showHide` value is `hide`
 
-*Feedback processing*
+=== Feedback processing ===
 
 The variable given by the identifier defined by `outcomeIdentifier` attribute is under consideration. For this variable a comparison of its value  and the value defined by `identifier` attribute is performed. The value in `identifier` attribute could be of three types:
  1. *numerical value* - the value of the given variable and the value defined in `identifier` attribute are compared on the mathematical basis. Three comapators are available for the definition
@@ -174,7 +174,7 @@ Example:
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml
 
 
-=== Assessment feedback ===
+== Assessment feedback ==
 
 Feedback could be displayed on the results summary page that is shown after the Assessment Session is finished. Assessment feedback is a HTML content that is displayed when the condition of the percentage score result is met. The `<assessmentFeedback>` tag could contain one or more `<assessmentFeedbackCase>` tags. Every `<assessmentFeedbackCase>` tag defines a feedback contents thwt will be shown when the condition defined is met. 
 
