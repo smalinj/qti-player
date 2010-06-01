@@ -78,13 +78,17 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_cho
 Modal feedback is defined by including the declaration of `< modalFeedback />` node in Assessment Item document, as follows in the example:
 {{{
 <assessmentItem>
-  <responseDeclaration ... />
+  <responseDeclaration identifier="RESPONSE"... />
   <outcomeDeclaration identifier="IDENTIFIER" ... />
   <itemBody>
     ...
+    <choiceInteraction responseIdentifier="RESPONSE" ... >
+      ...
+    </choiceInteraction>
+    ...
   </itemBody>
   <responseProcessing ... />
-  <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="VALUE" showHide="show" >Feedback.</modalFeedback>
+  <modalFeedback outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$" sound="beep.mp3" showHide="show" >Feedback.</modalFeedback>
 </assessmentItem>
 }}}
 Here are the attrributes explained:
