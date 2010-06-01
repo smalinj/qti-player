@@ -70,8 +70,11 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_mul
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml
 
+----
+
 = Feedback processing =
 
+----
 
 == Modal feedback ==
 
@@ -173,6 +176,7 @@ Usage as below:
 Example:
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml
 
+----
 
 == Assessment feedback ==
 
