@@ -60,7 +60,7 @@ Remarks:
 == Text ==
 === inlineChoiceInteraction ===
 
-In work mode (not check mode):
+In standard mode (not check mode):
   * *qp-text-choice* - every button
 
 In check mode:
@@ -68,6 +68,9 @@ In check mode:
   * *qp-text-choice-wrong* - wrong answer
 
 === textEntryInteraction ===
+
+In standard mode (not check mode):
+  * *qp-text-textentry* - every button
 
 In check mode:
   * *qp-text-textentry-correct* - correct answer
