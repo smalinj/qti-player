@@ -12,6 +12,7 @@ Currenty only the most basic options are supported:
     * inlineChoice (shuffle)
     * textEntryInteraction
     * orderInteraction
+    * matchInteraction
   * Object
     * support for video files
     * support for audio files
