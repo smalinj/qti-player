@@ -21,6 +21,8 @@ public void createPlayer(){
 
     // mount player in html element of id "root"
     Player p = new Player("root");
+    // optionally - flow options could be set
+    p.setFlowOptions(new FlowOptions(false, false, PageItemsDisplayMode.ONE));
     // load data source xml documents
     p.load(assessmentData, itemDatas);
     // after performing all load routines, player is working :)
