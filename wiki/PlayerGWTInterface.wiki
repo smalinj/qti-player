@@ -23,7 +23,7 @@ public void createPlayer(){
     Player p = new Player("root");
     // load data source xml documents
     p.load(assessmentData, itemDatas);
-    // player is now working :)
+    // after performing all load routines, player is working :)
 }
 }}}
 
