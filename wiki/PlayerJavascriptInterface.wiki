@@ -53,7 +53,7 @@ Flow options are parameters that control the flow of the content in the player. 
  * showToC (true/false) - show the Table of Contents page
  * showSummary (true/false) - show the Summary page
  * itemsDisplayMode("ONE"/"ALL") - determines if only one item per page or all items per page are shown (the "ALL" mode is dedicated for enabling the print feature)
-
+Flow option should be initialized by `setFlowOptions` function *before* loading the contents!
 
 == HTML/javascript usage example: ==
 {{{
