@@ -48,7 +48,11 @@ Assessment session state control concerns the management over the content introd
 === + Assessment Session Report ===
 Provides the information about the current Assessment and Item Sessions features.
 
-
+=== + Flow Options ===
+Flow options are parameters that control the flow of the content in the player. There are 3 variables in the flow options:
+ * showToC (true/false) - show the Table of Contents page
+ * showSummary (true/false) - show the Summary page
+ * itemsDisplayMode("ONE"/"ALL") - determines if only one item per page or all items per page are shown (the "ALL" mode is dedicated for enabling the print feature)
 
 
 == HTML/javascript usage example: ==
@@ -58,6 +62,7 @@ Provides the information about the current Assessment and Item Sessions features
   function qpOnAppLoaded(){
     // Load assessment
     var player = qpCreatePlayer('player');
+    player.setFlowOptions({showToC: true, showSummary: true, itemsDisplayMode: "ONE"});
     player.load('content/test.xml');
 
     // implement this functions in order to catch 
@@ -147,4 +152,4 @@ Provides the information about the current Assessment and Item Sessions features
 
   }
 </script>
-}}}
+}}}z
