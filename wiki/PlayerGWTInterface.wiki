@@ -30,5 +30,4 @@ public void createPlayer(){
 
 The live example of implementing the Player object is presented here:
 
-http://qti-player.googlecode.com/svn/trunk/qtiplayer/src/com/qtitools/player/client
-/DirectLoadInterfaceTest.java
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/src/com/qtitools/player/client/DirectLoadInterfaceTest.java
