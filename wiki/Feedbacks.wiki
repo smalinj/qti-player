@@ -8,9 +8,9 @@ In this document the implementation of inline, modal and assessment feedbacks is
 
 = Feedback processing =
 
-== Modal feedback ==
+== Feedback implementation ==
 
-Modal feedback is defined by including the declaration of `< modalFeedback />` node in Assessment Item document, as follows in the example:
+Modal feedback is defined by including the declaration of `< modalFeedback />` node in Assessment Item document. The inline feedback is defined by `< feedbackInline />` node. As follows in the example:
 {{{
 <assessmentItem>
   <responseDeclaration identifier="RESPONSE"... />
@@ -18,7 +18,7 @@ Modal feedback is defined by including the declaration of `< modalFeedback />` n
   <itemBody>
     ...
     <choiceInteraction responseIdentifier="RESPONSE" ... >
-      ...
+      <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$"showHide="show" >Inline feedback.</modalFeedback>
     </choiceInteraction>
     ...
   </itemBody>
@@ -60,6 +60,8 @@ If `showHide` set to `show` the feedback will be shown when the condition of the
 <modalFeedback outcomeIdentifier="RESPONSE" identifier="A1;A2;A3" showHide="show">A1, A2 and A3 are selected</modalFeedback>
 }}}
 
+In every example case it could be either `< modalFeedback />` or `< feedbackInline />`.
+
 Please note that `identifier="(H;He)|(H;He)"` has the identical translation as `identifier="H;He"`. The first one is processed as *regular expression*, the latter as *standard expression*.
 
 When the `identifier` attribute value is compared to the variable value it is crucial to know how these values are stored. For the purpose of the comparison process the values are stored as string. When the value consists of multiple subvalues, they are separated with semicolon. Here are some examples:
@@ -72,7 +74,13 @@ For more examples of feedback usage see:
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_multiple.xml
 
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/order.xml
+
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/match.xml
+
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/text_entry.xml
+
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml
 
 === Sound as modal feedback - 'sound' attribute ===
 
