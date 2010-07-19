@@ -30,7 +30,7 @@ Here are the attrributes explained:
  * *outcomeIdentifier* - the *identifier* of the variable that will be user in the processing; could be identifier of Response Variable or Outcome Variable
  * *identifier* - the value to which the current value of the variable will be compared; 
  * *senderIdentifier* - the identifier of the module that triggered the Feedback Processing
- * *sound* - url to the audio file that will be played upon the feedback activation
+ * *sound* - url to the audio file that will be played upon the feedback activation (only for `modalFeedback`)
  * *showHide* - (show/hide) - if the result of the processing is positive the feedback will only be shown (or played) id the `showHide` value is `show`. If the result is negative, feedback will not be shown unless the `showHide` value is `hide`
 
 === Feedback processing ===
