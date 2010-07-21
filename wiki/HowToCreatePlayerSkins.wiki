@@ -75,3 +75,7 @@ In standard mode (not check mode):
 In check mode:
   * *qp-text-textentry-correct* - correct answer
   * *qp-text-textentry-wrong* - wrong answer
+
+
+== Operation messages CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/message-css-map.png
