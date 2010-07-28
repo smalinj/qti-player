@@ -1,7 +1,9 @@
 package com.qtitools.player.client.model;
 
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Vector;
+import java.util.Map;
+
 import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Label;
@@ -21,9 +23,10 @@ import com.qtitools.player.client.model.variables.IVariableCreator;
 import com.qtitools.player.client.model.variables.VariableManager;
 import com.qtitools.player.client.model.variables.outcome.Outcome;
 import com.qtitools.player.client.model.variables.response.Response;
-import com.qtitools.player.client.module.ModuleSocket;
 import com.qtitools.player.client.module.IStateful;
+import com.qtitools.player.client.module.ModuleSocket;
 import com.qtitools.player.client.module.ModuleStateChangedEventsListener;
+import com.qtitools.player.client.style.StyleSocket;
 import com.qtitools.player.client.util.localisation.LocalePublisher;
 import com.qtitools.player.client.util.localisation.LocaleVariable;
 import com.qtitools.player.client.util.xml.document.XMLData;
@@ -44,13 +47,17 @@ public class Item implements IStateful {
 	
 	public StyleLinkDeclaration styleDeclaration;
 	
+	public StyleSocket styleSocket;
+	
 	private String title;
 
 	private XMLData xmlData;
 			
-	public Item(XMLData data, ModuleStateChangedEventsListener stateChangedListener){
+	public Item(XMLData data, ModuleStateChangedEventsListener stateChangedListener, StyleSocket ss){
 
 		xmlData = data;
+		
+		styleSocket = ss;
 		
 		Node rootNode = xmlData.getDocument().getElementsByTagName("assessmentItem").item(0);
 		Node itemBodyNode = xmlData.getDocument().getElementsByTagName("itemBody").item(0);
@@ -169,9 +176,14 @@ public class Item implements IStateful {
 		@Override
 		public void add(InlineFeedback inlineFeedback) {
 			feedbackManager.add(inlineFeedback);
-			
 		}
-
+		
+		@Override
+		public Map<String,String> getStyles(String selector) {
+			System.out.println("ModuleSocket::getStyles for " + selector);
+			return (styleSocket!=null)? styleSocket.getStyles(selector) : new HashMap<String,String>();
+		}
+		
 	};
 	
 	public void close(){
@@ -308,5 +320,8 @@ public class Item implements IStateful {
 
 	//------------------------- STYLE --------------------------------
 	
+	public void setStyleSocket( StyleSocket ss ) {
+		this.styleSocket = ss;
+	}
 
 }

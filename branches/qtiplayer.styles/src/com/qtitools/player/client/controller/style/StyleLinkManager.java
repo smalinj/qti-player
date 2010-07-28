@@ -3,6 +3,13 @@ package com.qtitools.player.client.controller.style;
 import java.util.Vector;
 import com.google.gwt.core.client.JavaScriptObject;
 
+/**
+ * Appends css links to head element.
+ * Css links are read from assessment or assessmentItem 
+ * and registered by DeliveryEngine.
+ * 
+ * @author Rafa³ Rybacki rrybacki@ydp.com.pl
+ */
 public class StyleLinkManager {
 
 	public StyleLinkManager(){

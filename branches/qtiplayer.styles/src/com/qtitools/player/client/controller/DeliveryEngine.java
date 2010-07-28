@@ -1,5 +1,7 @@
 package com.qtitools.player.client.controller;
 
+import java.util.Vector;
+
 import com.qtitools.player.client.controller.communication.ActivityActionType;
 import com.qtitools.player.client.controller.communication.FlowOptions;
 import com.qtitools.player.client.controller.communication.IAssessmentReport;
@@ -16,7 +18,6 @@ import com.qtitools.player.client.controller.flow.FlowEventsListener;
 import com.qtitools.player.client.controller.flow.FlowManager;
 import com.qtitools.player.client.controller.flow.navigation.NavigationCommandsListener;
 import com.qtitools.player.client.controller.flow.navigation.NavigationIncidentType;
-import com.qtitools.player.client.controller.log.OperationLogManager;
 import com.qtitools.player.client.controller.session.SessionDataManager;
 import com.qtitools.player.client.controller.session.StateInterface;
 import com.qtitools.player.client.controller.session.events.StateChangedEventsListener;
@@ -55,14 +56,11 @@ public class DeliveryEngine implements DataLoaderEventListener, FlowEventsListen
 	public EngineModeManager mode;
 	
 	private int masteryScore;
-	//private Vector<Boolean> itemsVisited;
 	
 	private StyleLinkManager styleManager;
 	
-	//private AssessmentEventsHandler deliveryEngineHandler;
-	
-
 	private DataSourceManager dataManager;
+	
 	private FlowManager flowManager;
 	private SessionDataManager sessionDataManager;
 	
@@ -88,6 +86,7 @@ public class DeliveryEngine implements DataLoaderEventListener, FlowEventsListen
 		sessionDataManager = new SessionDataManager(this);
 		
 		assessmentController = new AssessmentController(playerViewSocket.getAssessmentViewSocket(), flowManager, sessionDataManager);
+		assessmentController.setStyleSocket( dataManager.getStyleProvider() );
 		
 		playerViewSocket.setPlayerViewCarrier(new PlayerViewCarrier());
 		
@@ -655,12 +654,14 @@ public class DeliveryEngine implements DataLoaderEventListener, FlowEventsListen
 
 	public void updateAssessmentStyle(){
 		String userAgent = styleManager.getUserAgent();
-		styleManager.registerAssessmentStyles(dataManager.getAssessmentStyleLinksForUserAgent(userAgent));
+		Vector<String> links = dataManager.getAssessmentStyleLinksForUserAgent(userAgent);
+		styleManager.registerAssessmentStyles( links );
 	}
 
 	public void updatePageStyle(){
 		String userAgent = styleManager.getUserAgent();
-		styleManager.registerItemStyles(dataManager.getPageStyleLinksForUserAgent(flowManager.getPageReference(), userAgent));
+		Vector<String> links = dataManager.getPageStyleLinksForUserAgent(flowManager.getPageReference(), userAgent);
+		styleManager.registerItemStyles( links );
 	}
 
 }
