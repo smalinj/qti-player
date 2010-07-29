@@ -1,7 +1,6 @@
 package com.qtitools.player.client.controller.data;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Vector;
 
 import com.google.gwt.core.client.GWT;
@@ -30,7 +29,6 @@ import com.qtitools.player.client.controller.data.events.StyleDataLoaderEventLis
 import com.qtitools.player.client.controller.log.OperationLogEvent;
 import com.qtitools.player.client.controller.log.OperationLogManager;
 import com.qtitools.player.client.style.StyleSocket;
-import com.qtitools.player.client.util.js.JSOModel;
 import com.qtitools.player.client.util.xml.XMLDocument;
 import com.qtitools.player.client.util.xml.document.IDocumentLoaded;
 import com.qtitools.player.client.util.xml.document.XMLData;
@@ -196,18 +194,15 @@ public class DataSourceManager implements AssessmentDataLoaderEventListener, Ite
 		try {
 			// load assesment styles
 			List<String> aStyles = assessmentDataManager.getStyleLinksForUserAgent(userAgent);
-			System.out.println("found " + aStyles.size() + " assessment styles");
 			for (String styleURL : aStyles) {
 				RequestBuilder builder = new RequestBuilder( RequestBuilder.GET, styleURL);
 				styleLoadCounter++;
-				System.out.println("load assessment style: "+styleURL);
 				builder.setCallback( new RequestCallback() {
 					@Override
 					public void onResponseReceived(Request request, Response response) {
 						styleLoadCounter--;
 						if (response.getStatusCode()==Response.SC_OK) { 
 							styleDataSourceManager.addAssessmentStyle( response.getText() );
-							System.out.println("loaded assessment style");
 						} else {
 							// TODO add error handling
 						}
@@ -223,22 +218,18 @@ public class DataSourceManager implements AssessmentDataLoaderEventListener, Ite
 			}
 			// load item styles
 			int itemCount = itemDataCollectionManager.getItemsCount();
-			System.out.println("get styles from "+itemCount+" items");
 			for (int i=itemCount-1;i>=0;i--) {
 				List<String> iStyles = itemDataCollectionManager.getStyleLinksForUserAgent(i, userAgent);
-				System.out.println("found " + iStyles.size() + " styles for item " + i);
 				for (String styleURL : iStyles) {
 					final int ii = i;
 					RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, styleURL);
 					styleLoadCounter++;
-					System.out.println("load item style: "+styleURL);
 					builder.setCallback( new RequestCallback() {
 						@Override
 						public void onResponseReceived(Request request, Response response) {
 							styleLoadCounter--;
 							if (response.getStatusCode()==Response.SC_OK) {
 								styleDataSourceManager.addItemStyle(ii, response.getText());
-								System.out.println("loaded item "+ii+" style");
 							} else {
 								// TODO add error handling
 							}
@@ -263,14 +254,6 @@ public class DataSourceManager implements AssessmentDataLoaderEventListener, Ite
 			public boolean execute() {
 				if (styleLoadCounter==0) {
 					onLoadFinished();
-					Map<String,String> styles = styleDataSourceManager.getStyles("order");
-					System.out.println( styleDataSourceManager.hashCode() );
-					System.out.println(styles.containsKey("module-layout"));
-					JSOModel jsStyles = styleDataSourceManager.getStyleProperties("order");
-					for (int i=0;i<jsStyles.keys().length();i++) {
-						String key = jsStyles.keys().get(i);
-						System.out.println(key+":"+jsStyles.get(key));
-					}
 					return false;
 				}
 				return true;
