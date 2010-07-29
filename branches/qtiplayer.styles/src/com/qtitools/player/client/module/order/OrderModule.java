@@ -92,14 +92,8 @@ public class OrderModule extends Composite implements IInteractionModule {
 		container.setStylePrimaryName("qp-order-container");
 		
 		// get DragMode from style sheet
-		System.out.println( moduleSocket.hashCode() );
-		System.out.println("OrderModule tries to read styles from css");
-		Map<String,String> styles = moduleSocket.getStyles( "order" );
-		System.out.println("found " + styles.size() + " styles");
+		Map<String,String> styles = moduleSocket.getStyles( element );
 		DragMode dm = (styles.containsKey("module-layout") && styles.get("module-layout").equals("vertical"))? DragMode.VERTICAL : DragMode.HORIZONTAL;
-		System.out.println("style has module-layout key:" + styles.containsKey("module-layout"));
-		System.out.println("module-layout style: "+styles.get("module-layout"));
-		System.out.println("drag mode: "+dm.toString());
 		container.setDragMode( dm );
 		
 		mainPanel = new VerticalPanel();

@@ -4,6 +4,9 @@ import junit.framework.Assert;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
+import com.google.gwt.xml.client.Document;
+import com.google.gwt.xml.client.Element;
+import com.google.gwt.xml.client.XMLParser;
 import com.google.gwt.junit.client.GWTTestCase;
 import com.qtitools.player.client.controller.data.StyleDataSourceManager;
 import com.qtitools.player.client.controller.data.events.StyleDataLoaderEventListener;
@@ -43,12 +46,20 @@ public class CssParserTest extends GWTTestCase {
 				System.out.println("style data loaded");
 			}
 		});
+		
+		Document doc = XMLParser.parse("<orderInteraction responseIdentifier=\"RESPONSE\" shuffle=\"true\" />");
+		Element e = doc.getDocumentElement();
+		
 		Assert.assertNotNull( sdsm );
-		Assert.assertEquals( "no styles were added yet", 0, sdsm.getStyleProperties("customSelector").keys().length() );
+		Assert.assertEquals( "no styles were added yet", 0, sdsm.getStyleProperties(e).keys().length() );
+
+
+		doc = XMLParser.parse("<customSelector />");
+		e = doc.getDocumentElement();
 
 		sdsm.addAssessmentStyle(css1);
 		sdsm.addItemStyle(0, css2);
-		JSOModel styles = sdsm.getStyleProperties("customSelector");
+		JSOModel styles = sdsm.getStyleProperties( e );
 		JsArrayString keys = styles.keys();
 		
 		Assert.assertEquals("style has correct number of properties",3,keys.length());
@@ -66,7 +77,11 @@ public class CssParserTest extends GWTTestCase {
 				System.out.println("style data loaded");
 			}
 		});
-		JSOModel styles = sdsm.getStyleProperties("selector");
+		
+		Document doc = XMLParser.parse("<customSelector />");
+		Element e = doc.getDocumentElement();
+		
+		JSOModel styles = sdsm.getStyleProperties(e);
 		Assert.assertNotNull( "if styles are not initialized getStyleProperties still returns JSOModel", styles );
 		Assert.assertEquals( "returned JSOModel is empty", 0, styles.keys().length());
 	}

@@ -8,6 +8,7 @@ import java.util.Vector;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
+import com.google.gwt.xml.client.Element;
 import com.qtitools.player.client.controller.data.events.StyleDataLoaderEventListener;
 import com.qtitools.player.client.style.JsCssModel;
 import com.qtitools.player.client.style.StyleSocket;
@@ -52,7 +53,8 @@ public class StyleDataSourceManager implements StyleSocket {
 		styles.add(parseCss(css));
 	}
 
-	public JSOModel getStyleProperties(String selector) {
+	public JSOModel getStyleProperties(Element element) {
+		String selector = element.getNodeName();
 		JSOModel result = JavaScriptObject.createObject().cast();
 		for (JavaScriptObject sheet : assessmentStyle) {
 			JsCssModel cssModel = sheet.cast();
@@ -71,9 +73,9 @@ public class StyleDataSourceManager implements StyleSocket {
 	}
 	
 	@Override
-	public Map<String,String> getStyles(String selector) {
+	public Map<String,String> getStyles(Element element) {
 		Map<String,String> map = new HashMap<String, String>();
-		JSOModel result = getStyleProperties(selector);
+		JSOModel result = getStyleProperties( element );
 		JsArrayString keys = result.keys();
 		for (int i=0;i<keys.length();i++) {
 			String key = keys.get(i); 

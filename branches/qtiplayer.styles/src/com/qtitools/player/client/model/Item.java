@@ -179,9 +179,8 @@ public class Item implements IStateful {
 		}
 		
 		@Override
-		public Map<String,String> getStyles(String selector) {
-			System.out.println("ModuleSocket::getStyles for " + selector);
-			return (styleSocket!=null)? styleSocket.getStyles(selector) : new HashMap<String,String>();
+		public Map<String,String> getStyles(Element element) {
+			return (styleSocket!=null)? styleSocket.getStyles(element) : new HashMap<String,String>();
 		}
 		
 	};
