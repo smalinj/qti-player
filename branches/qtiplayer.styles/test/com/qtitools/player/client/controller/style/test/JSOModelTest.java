@@ -31,10 +31,4 @@ public class JSOModelTest extends GWTTestCase {
 		Assert.assertEquals("model created from JSON returns correct property", "#FF0000", m.get("color") );
 	}
 	
-	public void testInvalidJSON() {
-		JSOModel m = JSOModel.fromJson( "{\"color\": \"#FF0000\", \"customProperty\": \"abc\", \"intProperty\": 100}" );
-		Assert.assertTrue( "JSOModel created", m instanceof JSOModel);
-		Assert.assertEquals("JSOModel created from invalid json is empty", 0, m.keys().length());
-	}
-	
 }
