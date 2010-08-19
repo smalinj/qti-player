@@ -56,6 +56,8 @@ Remarks:
  * for IE the lines drawn in the area are described by classes that end with *-vml*, for the rest of the browsers (FF, Opera, Chrome, Safari) those classes names' end with *-svg*
 
 
+== Selection interaction CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/selection-css-map.png
 
 == Text ==
 === inlineChoiceInteraction ===
