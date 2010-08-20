@@ -70,7 +70,7 @@ When the `identifier` attribute value is compared to the variable value it is cr
  * baseType:pair & directedPair - `A1 A2;A3 A4;A5 A6`
 
 
-For more examples of feedback usage see:
+For more examples on feedback usage see:
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/test/choice_multiple.xml
 
