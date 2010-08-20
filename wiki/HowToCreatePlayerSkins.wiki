@@ -59,6 +59,10 @@ Remarks:
 == Selection interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/selection-css-map.png
 
+
+== Identification interaction CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/identification-css-map.png
+
 == Text ==
 === inlineChoiceInteraction ===
 
