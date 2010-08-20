@@ -84,6 +84,8 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_cho
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/selection.xml
 
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/identification.xml
+
 === Sound as modal feedback - 'sound' attribute ===
 
 In order to achieve sound playback as an feedback action, the attribute `sound` of the `modalFeedback` node must be defined. It could be done as follows:
