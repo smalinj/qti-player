@@ -123,9 +123,20 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_cho
 
 === Inline feedback alignment - 'align' attribute  ===
 
-The inline feedback cloud can be positioned around the mounting element in a few different ways. This is applied using `aling` attribute of `<inlineFeedback>` node. The default value for this attribute is `TOP_LEFT`. The picture below explains the details of the feedback positioning.
+The inline feedback cloud can be positioned around the mounting element in a few different ways. This is applied using `aling` attribute of `<inlineFeedback>` node. The default value for this attribute is `TOP_LEFT`. The example implementation of the inline feeback position looks like this.
+
+{{{
+<feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$"showHide="show" align="TOP_CENTER">Inline feedback.</feedbackInline>
+<feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$"showHide="show" align="BOTTOM_RIGHT">Inline feedback.</feedbackInline>
+}}}
+
+The picture below explains the details of the feedback positioning.
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/inline-feedback-align.png
+
+For more examples on implementing inline feedback alignment see
+
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml
 
 == Assessment feedback ==
 
