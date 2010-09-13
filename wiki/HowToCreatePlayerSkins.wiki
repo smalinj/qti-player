@@ -24,12 +24,12 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/resultpage-css-map.
 
 == Choice interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/choice-css-map.png
-
+<wiki:comment>
 When the answer is selected, the inline feeback may be shown for each answer:
   * *qp-choice-feedback* - inline feedback (hidden)
   * *qp-choice-feedback-correct* - inline feedback shown for a correct answer
   * *qp-choice-feedback-wrong* - inline feedback shown for a wrong answer
-
+</wiki:comment>
 In work mode:
   * *qp-choice-button* - every button
 
