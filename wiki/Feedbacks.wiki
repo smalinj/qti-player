@@ -167,7 +167,7 @@ To enable the fade-in and fade-out effect please add the `fadeEffect` attribute 
 <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" showHide="show" fadeEffect="500">Inline feedback.</feedbackInline>
 }}}
 
-If the specified value is "0" or there is no `fadeEffect` attribute the fade effects will be disabled.
+If the specified value is fadeEffect="0" or there is no `fadeEffect` attribute the fade effects will be disabled.
 
 == Assessment feedback ==
 
