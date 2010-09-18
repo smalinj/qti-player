@@ -167,6 +167,8 @@ To enable the fade-in and fade-out effect please add the `fadeEffect` attribute 
 <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" showHide="show" fadeEffect="500">Inline feedback.</feedbackInline>
 }}}
 
+If the specified value is "0" or there is no `fadeEffect` attribute the fade effects will be disabled.
+
 == Assessment feedback ==
 
 Feedback could be displayed on the results summary page that is shown after the Assessment Session is finished. Assessment feedback is a HTML content that is displayed when the condition of the percentage score result is met. The `<assessmentFeedback>` tag could contain one or more `<assessmentFeedbackCase>` tags. Every `<assessmentFeedbackCase>` tag defines a feedback contents thwt will be shown when the condition defined is met. 
