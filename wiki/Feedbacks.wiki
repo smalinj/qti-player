@@ -18,7 +18,7 @@ Modal feedback is defined by including the declaration of `< modalFeedback />` n
   <itemBody>
     ...
     <choiceInteraction responseIdentifier="RESPONSE" ... >
-      <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$"showHide="show" align="TOP_CENTER" mark="CORRECT">Inline feedback.</feedbackInline>
+      <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$"showHide="show" align="TOP_CENTER" mark="CORRECT" fadeEffect="500">Inline feedback.</feedbackInline>
     </choiceInteraction>
     ...
   </itemBody>
@@ -155,6 +155,15 @@ According to the value of the mentioned attribute the outer `<div>` containing t
 || mark="CORRECT" || class="qp-feedback-inline-correct" || - ||
 || mark="WRONG" || class="qp-feedback-inline-wrong" || - ||
 || mark="AUTO" || class="qp-feedback-inline-(correct/wrong)" || Qti-player will try to automatically determine the evaluation basing on the correct answer value of the considered Response Variable ||
+|| not present || class="qp-feedback-inline" || treated as mark="NONE" ||
+
+
+=== Inline feedback fade-in and fade-out effects ===
+
+
+To enable the fade-in and fade-out effect please add the `fadeEffect` attribute to the `<feedbackInline>` node. The value of the attribute represents the amount of time in ms (miliseconds) that will be spent on showing or hidin the feedback cloud. The typical implementation of the node would look as follows:
+
+<feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" showHide="show" fadeEffect="500">Inline feedback.</feedbackInline>
 
 
 == Assessment feedback ==
