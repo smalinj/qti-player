@@ -18,7 +18,7 @@ Modal feedback is defined by including the declaration of `< modalFeedback />` n
   <itemBody>
     ...
     <choiceInteraction responseIdentifier="RESPONSE" ... >
-      <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$"showHide="show" align="TOP_CENTER">Inline feedback.</feedbackInline>
+      <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" senderIdentifier="^RESPONSE$"showHide="show" align="TOP_CENTER" mark="CORRECT">Inline feedback.</feedbackInline>
     </choiceInteraction>
     ...
   </itemBody>
@@ -137,6 +137,18 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/inline-feedback-ali
 For more examples on implementing inline feedback alignment see
 
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/content/demo/inline_choice.xml
+
+
+=== Feedback for correct/wrong - styling ===
+
+The feature of setting different CSS style classes for feedback that with the corresponding answer evaluable as correct or wrong has been implemented. This behaviour can be achieved through manipulating the value of the `mark` atrtibute of the `<inlineFeedback>` node. According to the value of the mentioned attribute the outer `<div>` containing the inline feedback will be styled with different classes. The table below explains this feature:
+
+|| `mark` attribute || style class || comment ||
+|| mark="NONE" || class="qp-feedback-inline" || - ||
+|| mark="CORRECT" || class="qp-feedback-inline-correct" || - ||
+|| mark="WRONG" || class="qp-feedback-inline-wrong" || - ||
+|| mark="AUTO" || class="qp-feedback-inline-(correct/wrong)" || Qti-player will try to automatically determine the evaluation basing on the correct answer value the considered Response Variable ||
+
 
 == Assessment feedback ==
 
