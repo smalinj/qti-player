@@ -163,8 +163,9 @@ According to the value of the mentioned attribute the outer `<div>` containing t
 
 To enable the fade-in and fade-out effect please add the `fadeEffect` attribute to the `<feedbackInline>` node. The value of the attribute represents the amount of time in ms (miliseconds) that will be spent on showing or hidin the feedback cloud. The typical implementation of the node would look as follows:
 
+{{{
 <feedbackInline outcomeIdentifier="IDENTIFIER" identifier="VALUE" showHide="show" fadeEffect="500">Inline feedback.</feedbackInline>
-
+}}}
 
 == Assessment feedback ==
 
