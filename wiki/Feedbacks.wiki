@@ -147,7 +147,7 @@ The feature of setting different CSS style classes for feedback that with the co
 || mark="NONE" || class="qp-feedback-inline" || - ||
 || mark="CORRECT" || class="qp-feedback-inline-correct" || - ||
 || mark="WRONG" || class="qp-feedback-inline-wrong" || - ||
-|| mark="AUTO" || class="qp-feedback-inline-(correct/wrong)" || Qti-player will try to automatically determine the evaluation basing on the correct answer value the considered Response Variable ||
+|| mark="AUTO" || class="qp-feedback-inline-(correct/wrong)" || Qti-player will try to automatically determine the evaluation basing on the correct answer value of the considered Response Variable ||
 
 
 == Assessment feedback ==
