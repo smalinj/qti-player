@@ -80,14 +80,6 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
       // called after the Assessment Session is finished
       alert("Assessment Session finished");
     }
-    player.onItemSessionBegin = function(){
-      // called after each Item Session is begun
-      alert("Item Session begin");
-    }
-    player.onItemSessionFinished = function(){
-      // called after each Item Session is finished
-      alert("Item Session finished");
-    }
   }
 
   function managePlayer(){
