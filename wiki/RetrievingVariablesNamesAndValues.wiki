@@ -1,4 +1,4 @@
-#summary JavaScript API to get variables' names and values whil playing the test
+#summary JavaScript API to get variables' names and values while playing the test
 
 = Introduction =
 
