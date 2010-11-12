@@ -87,7 +87,7 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
       alert("Page is to be switched");
     }
 
-    player.onTestPageSwitching = function(){
+    player.onTestPageSwitched = function(){
       // called after the page has been switched
       // called only for pages of type "TEST" (it means that if user is exiting TOC or SUMMARY page, the function won't trigger)
       alert("Page has been switched");
