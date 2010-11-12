@@ -16,7 +16,7 @@ The following example explains how to display an alert with the answers given by
         player1 = qpCreatePlayer('player');
         player1.load('content/demo.xml');
 		
-	player1.onPageSwitching = function(){
+	player1.onTestPageSwitching = function(){
 		// get current item index (first page has index of 1)
 		var s = "page: " + player1.getAssessmentSessionReport().getItemIndex(); 
 		// get the array of current item response variables names
