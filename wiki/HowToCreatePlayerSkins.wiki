@@ -63,7 +63,7 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/selection-css-map.p
 == Identification interaction CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/identification-css-map.png
 
-== Text ==
+
 === inlineChoiceInteraction ===
 
 In standard mode (not check mode):
@@ -82,6 +82,11 @@ In check mode:
   * *qp-text-textentry-correct* - correct answer
   * *qp-text-textentry-wrong* - wrong answer
 
+
+== Audio Player ==
+The audio player button takes the two style classes
+  * *qp-audioplayer-button* - when stopped
+  * *qp-audioplayer-button-playing* - when playing
 
 == Operation messages CSS map  ==
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/message-css-map.png
