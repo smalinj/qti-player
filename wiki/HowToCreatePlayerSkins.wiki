@@ -64,6 +64,14 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/selection-css-map.p
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/identification-css-map.png
 
 
+== Drag-drop interaction CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/dragdrop-css-map.png
+
+
+== Vocabox CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/vocabox-css-map.png
+
+
 === inlineChoiceInteraction ===
 
 In standard mode (not check mode):
