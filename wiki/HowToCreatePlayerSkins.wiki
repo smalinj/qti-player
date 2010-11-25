@@ -72,6 +72,10 @@ http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/dragdrop-css-map.pn
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/vocabox-css-map.png
 
 
+== Text Entry Multiple CSS map  ==
+http://qti-player.googlecode.com/svn/trunk/qtiplayer/doc/out/textentrymultiple-css-map.png
+
+
 === inlineChoiceInteraction ===
 
 In standard mode (not check mode):
