@@ -158,6 +158,11 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
     if (lessonStatus == "PASSED")
       alert("Lesson passed");
 
+    // get total mistakes (value for the current page is refreshed after the page is switched)
+    var totalMistakes = report.getTotalMistakes()
+    // get total checks (value for the current page is refreshed after the page is switched)
+    var totalChecks = report.getTotalChecks()
+
   }
 
 function getItemsSessionData(){
@@ -165,6 +170,8 @@ function getItemsSessionData(){
     var report = player.getAssessmentSessionReport();
 
     // get session data for the selected item
+    // values for the current page are refreshed after the page is switched
+
     for (var itemIndex = 0 ; itemIndex < report.getItemsCount() ; itemIndex ++){
         var itemTime = report.getItemTime(itemIndex);
         var itemScore = report.getItemScore(itemIndex);
