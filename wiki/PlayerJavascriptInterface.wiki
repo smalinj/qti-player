@@ -162,8 +162,10 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
 
 function getItemsSessionData(){
 
+    var report = player.getAssessmentSessionReport();
+
     // get session data for the selected item
-    for (var itemIndex = 0 ; itemIndex < itemsCount ; itemIndex ++){
+    for (var itemIndex = 0 ; itemIndex < report.getItemsCount() ; itemIndex ++){
         var itemTime = report.getItemTime(itemIndex);
         var itemScore = report.getItemScore(itemIndex);
         var itemScoreMax = report.getItemScoreMax(itemIndex);
