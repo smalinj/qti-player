@@ -91,6 +91,8 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
       // called after the page has been switched
       // called only for pages of type "TEST" (it means that if user is exiting TOC or SUMMARY page, the function won't trigger)
       alert("Page has been switched");
+
+      // if you plan to chec
     }
   }
 
@@ -155,5 +157,18 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
       alert("Lesson passed");
 
   }
+
+function getItemsSessionData(){
+
+    // get session data for the selected item
+    for (var itemIndex = 0 ; itemIndex < itemsCount ; itemIndex ++){
+        var itemTime = report.getItemTime(itemIndex);
+        var itemScore = report.getItemScore(itemIndex);
+        var itemScoreMax = report.getItemScoreMax(itemIndex);
+        var itemMistakes = report.getItemMistakes(itemIndex);
+        var itemChecks = report.getItemChecks(itemIndex);
+    }
+}
+
 </script>
-}}}z
+}}}
