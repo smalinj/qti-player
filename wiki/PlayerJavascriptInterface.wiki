@@ -9,12 +9,16 @@ This article explains the usage of javascript interface of the _qtiplayer_ objec
 == Java Script interface features ==
 The description of crucial issues in the qtiplayer JS interface.
 
-=== + Loading xml contents ===
+=== + Loading XML contents ===
 
 XML contents may be loaded into application in three ways:
- * loading _assessmentTest_ XML
- * loading a single _assessmentItem_ XML 
- * loading through GWT API, see [http://code.google.com/p/qti-player/wiki/PlayerGWTInterface wiki]
+ * through JavaScript API, whole _assessmentTest_ XML
+ * through JavaScript API, a single _assessmentItem_ XML 
+ * through GWT API, see [http://code.google.com/p/qti-player/wiki/PlayerGWTInterface details]
+
+While qtiplayer application is initialized, content file may be loaded using `load` function. This function takes one argument - the URL to the XML file. 
+
+The mentioned XML file should contain either `<assessmentTest>` node or `<assessmentItem>` node. The contents will be automatically recognized and qtiplayer will display either whole Assessment or single item. Don't forget to set proper Flow Options in order to obtain single Item view.
 
 === + Navigation ===
 Navigation is the control over the Assessment Session and Assessment Item Session flows. Can be done when the _Engine Mode_ is _RUNNING_.
