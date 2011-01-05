@@ -53,6 +53,7 @@ Flow options are parameters that control the flow of the content in the player. 
  * showToC (true/false) - show the Table of Contents page
  * showSummary (true/false) - show the Summary page
  * itemsDisplayMode("ONE"/"ALL") - determines if only one item per page or all items per page are shown (the "ALL" mode is dedicated for enabling the print feature)
+ * showCheck (true/false) - show or hide the "Check" button 
 Flow option should be initialized by `setFlowOptions` function *before* loading the contents!
 
 == HTML/javascript usage example: ==
@@ -62,7 +63,7 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
   function qpOnAppLoaded(){
     // Load assessment
     var player = qpCreatePlayer('player');
-    player.setFlowOptions({showToC: true, showSummary: true, itemsDisplayMode: "ONE"});
+    player.setFlowOptions({showToC: true, showSummary: true, itemsDisplayMode: "ONE", showCheck: true});
     player.load('content/test.xml');
 
     // implement this functions in order to catch 
