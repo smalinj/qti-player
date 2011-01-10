@@ -67,6 +67,14 @@ Flow options are parameters that control the flow of the content in the player. 
  * showCheck (true/false) - show or hide the "Check" button 
 Flow option should be initialized by `setFlowOptions` function *before* loading the contents!
 
+=== + JavaScript Events ===
+JavaScript events are callback functions that could be defined by the user and while defined will be called by the player in crucial lifecycle moments. These functions are:
+ * onAssessmentLoaded - called after the contents are loaded and player is initialized, before player view is displayed (initial page index can be set here)
+ * onAssessmentSessionBegin - called after the view is displayed and qtiplayer session has begun (show answers commang can be placed here)
+ * onAssessmentSessionFinished - called when Summary page is displayed
+ * onTestPageSwitching - called before the test page is quitted
+ * onTestPageSwitching - called after the test page is opened
+
 == HTML/javascript usage example: ==
 {{{
 <script type="text/javascript" language="javascript" src="scorm/APIWrapper.js"></script>
@@ -83,6 +91,10 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
     player.onAssessmentLoaded = function(){
       // called after the contents are loaded, before view is displayed
       player.navigateGotoItem(3);
+      // or
+      // player.navigateGotoTOC();
+      // or
+      // player.navigateGotoSummary();
     } 
 
     player.onAssessmentSessionBegin = function(){
