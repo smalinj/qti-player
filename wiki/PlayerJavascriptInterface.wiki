@@ -79,7 +79,12 @@ Flow option should be initialized by `setFlowOptions` function *before* loading 
 
     // implement this functions in order to catch 
     // session events
- 
+    
+    player.onAssessmentLoaded = function(){
+      // called after the contents are loaded, before view is displayed
+      player.navigateGotoItem(3);
+    } 
+
     player.onAssessmentSessionBegin = function(){
       // called after the Asssessment Session is begun
       alert("Assessment Session begin");
