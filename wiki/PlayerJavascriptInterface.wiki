@@ -75,6 +75,19 @@ JavaScript events are callback functions that could be defined by the user and w
  * onTestPageSwitching - called before the test page is quitted
  * onTestPageSwitching - called after the test page is opened
 
+=== + State management ===
+The state data is represented by String value and includes:
+ * items' data inpt by the user
+ * items' results
+ * items' stats (mistakes & checks count, time)
+ * current page (the page that were visited while the state was obtained)
+
+When the state is loaded (`player.setStateString(state)` function, player is updated using all these data, including move to the current page.
+
+It is recommended that previously saved state is loaded in _onAssessmentLoaded_ event. In order to override the default behaviour of moving to the current page, navigation function should be called in the _onAssessmentLoaded_ event.
+
+The state may be updated in any moment of the qtiplayer lifecycle.
+
 == HTML/javascript usage example: ==
 {{{
 <script type="text/javascript" language="javascript" src="scorm/APIWrapper.js"></script>
@@ -90,6 +103,9 @@ JavaScript events are callback functions that could be defined by the user and w
     
     player.onAssessmentLoaded = function(){
       // called after the contents are loaded, before view is displayed
+      // load state
+      player.setStateString(state);
+      // go to selected page (overrides current page stored in state var)
       player.navigateGotoItem(3);
       // or
       // player.navigateGotoTOC();
