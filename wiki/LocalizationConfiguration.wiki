@@ -1,4 +1,4 @@
-#summary Localization of the player
+#summary Localization and configuration of the player with external files
 
 = Introduction =
 
