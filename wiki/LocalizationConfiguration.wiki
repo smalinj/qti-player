@@ -20,7 +20,7 @@ The example can be found here:
 http://qti-player.googlecode.com/svn/trunk/qtiplayer/war/locale_en.js
 
 
-= Localization =
+= Configuration =
 
 Qti-player is configured through so called _flow options_. These options can be read from .js configuration file or set in JavaScript code while starting the application. The .js configuration file should be included into HTML document.
 
