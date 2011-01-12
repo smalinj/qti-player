@@ -5,7 +5,8 @@
 The player localization could be adapted by creating the locale definition. This is defined in the form of javascript (_.js_) file. The structure of the file is shown below:
 
 {{{
-window.QtiPlayer = {};
+if (window.QtiPlayer == null)
+	window.QtiPlayer = {};
 
 window.QtiPlayer.locale = {
 	SUMMARY_PAGE: "Page", 
