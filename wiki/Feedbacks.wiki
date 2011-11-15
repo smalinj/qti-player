@@ -62,7 +62,7 @@ If `showHide` set to `show` the feedback will be shown when the condition of the
 
 In every example case it could be either `< modalFeedback />` or `< feedbackInline />`.
 
-Please note that `identifier="(H;He)|(H;He)"` has the identical translation as `identifier="H;He"`. The first one is processed as *regular expression*, the latter as *standard expression*.
+Please note that `identifier="(H;He)|(He;H)"` has the identical translation as `identifier="H;He"`. The first one is processed as *regular expression*, the latter as *standard expression*.
 
 When the `identifier` attribute value is compared to the variable value it is crucial to know how these values are stored. For the purpose of the comparison process the values are stored as string. When the value consists of multiple subvalues, they are separated with semicolon. Here are some examples:
  * cadrinality:simple - `A1`
