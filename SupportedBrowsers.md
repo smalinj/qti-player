@@ -1,0 +1,1 @@
+This player should work on all platforms where http://code.google.com/p/google-web-toolkit is supported.
